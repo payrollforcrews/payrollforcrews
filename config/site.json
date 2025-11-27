@@ -1,0 +1,46 @@
+{
+  "siteName": "Payroll for Crews",
+  "domain": "payrollforcrews.com",
+  "tagline": "Straight talk on payroll, time tracking, and HR for blue collar teams.",
+  "audience": {
+    "description": "Owners and managers who run crews on jobsites, not employees in cubicles.",
+    "crewSizeRange": "5-50 hourly workers",
+    "industries": [
+      "construction",
+      "trades",
+      "landscaping",
+      "cleaning",
+      "field-service"
+    ],
+    "workerMix": "Mix of W2 employees and 1099 subcontractors across one or more jobsites"
+  },
+  "positioning": {
+    "promise": "Help small crew-based businesses pick a boring, reliable payroll and time tracking setup that works every pay period.",
+    "nonGoals": [
+      "Do not sell payroll services or consulting.",
+      "Do not write generic 'top 10 tools' listicles.",
+      "Do not chase trendy tools that do not fit field crews."
+    ]
+  },
+  "topicClusters": [
+    "construction and jobsite payroll",
+    "time tracking and scheduling for crews",
+    "switching payroll providers mid-year",
+    "mixed W2 and 1099 worker setups",
+    "basic accounting and job costing for small crews"
+  ],
+  "contentStyle": {
+    "tone": [
+      "plain language",
+      "direct",
+      "no jargon",
+      "respectful of owner time"
+    ],
+    "rules": [
+      "Explain tradeoffs, not just features.",
+      "Prioritize examples from real crew scenarios.",
+      "Avoid fluffy intros; get to the point in the first few sentences.",
+      "Always include at least one practical checklist or step-by-step sequence."
+    ]
+  }
+}
