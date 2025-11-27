@@ -1,0 +1,47 @@
+[
+  {
+    "id": "timecamp",
+    "name": "TimeCamp",
+    "category": "time_tracking",
+    "who_it_helps": "Small crews that need simple job-costed time tracking tied to payroll and billing.",
+    "landing_url": "https://www.timecamp.com/",
+    "affiliate_url": null,
+    "status": "active"
+  },
+  {
+    "id": "connecteam",
+    "name": "Connecteam",
+    "category": "workforce_app",
+    "who_it_helps": "Owners who want an all-in-one app for scheduling, time clocks, tasks and crew communication.",
+    "landing_url": "https://connecteam.com/",
+    "affiliate_url": null,
+    "status": "active"
+  },
+  {
+    "id": "webhr",
+    "name": "WebHR",
+    "category": "hr_payroll",
+    "who_it_helps": "Small businesses that want HR records, leave tracking and payroll in one cloud system.",
+    "landing_url": "https://web.hr/",
+    "affiliate_url": null,
+    "status": "active"
+  },
+  {
+    "id": "lano",
+    "name": "Lano",
+    "category": "global_payroll",
+    "who_it_helps": "US and EU companies hiring contractors or employees in multiple countries and currencies.",
+    "landing_url": "https://www.lano.io/",
+    "affiliate_url": null,
+    "status": "active"
+  },
+  {
+    "id": "tyms",
+    "name": "Tyms",
+    "category": "accounting",
+    "who_it_helps": "Small businesses that want modern accounting with automation instead of manual spreadsheets.",
+    "landing_url": "https://tyms.io/",
+    "affiliate_url": null,
+    "status": "active"
+  }
+]
