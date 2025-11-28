@@ -1,63 +1,127 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const pageTitle = 'About Payroll for Crews';
+const pageDescription =
+  'Straight talk on payroll, time tracking, and HR tools for small crew based businesses.';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={pageTitle} description={pageDescription} />
+  </head>
+  <body>
+    <Header />
+    <main class="about">
+      <h1>About Payroll for Crews</h1>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+      <p>
+        Payroll for Crews is a small, opinionated site for owners and managers who run people on
+        jobsites, not in cubicles. It exists to help you pick a boring, reliable mix of payroll,
+        time tracking, and basic HR tools that works every pay period.
+      </p>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+      <h2>Who this is for</h2>
+      <p>
+        This site is written for small crews, usually somewhere between five and fifty hourly
+        workers. That can be construction, trades, landscaping, cleaning, or field service work.
+      </p>
+      <p>
+        If you are the person who signs checks, deals with bids, answers crew questions, and tries
+        to keep the wheels on, you are the audience.
+      </p>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+      <h2>What you can expect</h2>
+      <ul>
+        <li>Straight talk in plain language, not payroll jargon.</li>
+        <li>Concrete examples from crew life, not enterprise case studies.</li>
+        <li>Checklists and step by step sequences you can actually follow.</li>
+        <li>Guides that admit tradeoffs instead of pretending there is one perfect tool.</li>
+      </ul>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+      <p>
+        You will not see generic top ten listicle content here. Each article is meant to help you
+        solve one specific problem like switching payroll mid year, mixing W2 and 1099 workers, or
+        getting off paper timesheets.
+      </p>
+
+      <h2>How tools and affiliate links work</h2>
+      <p>
+        Some guides include links to tools like TimeCamp, Connecteam, WebHR, Lano, or Adam by Tyms.
+        In some cases these are affiliate links. That means if you sign up and stay as a paying
+        customer, this site may earn a commission.
+      </p>
+      <p>
+        It does not change your price. It does help justify the time spent writing deeper guides
+        instead of quick hit content.
+      </p>
+      <p>
+        If a tool stops being a good fit for small crew based businesses, the plan is simple. The
+        recommendation will be updated or removed. The goal is long term trust, not short term
+        clicks.
+      </p>
+
+      <h2>Where to start</h2>
+      <p>
+        If you are new here, start with the main setup guide, then pick the problem that feels most
+        painful right now.
+      </p>
+      <ul>
+        <li>
+          <a href="/blog/construction-payroll-setup/">
+            Best payroll and time tracking setup for ten to fifty person construction crews
+          </a>
+        </li>
+        <li>
+          <a href="/blog/w2-and-1099-payroll/">
+            How to handle payroll when you have both W2 employees and 1099 contractors
+          </a>
+        </li>
+        <li>
+          <a href="/blog/switching-payroll-mid-year/">
+            How to switch payroll providers mid year without losing your mind
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        As the site grows, more guides and checklists will be added so that you can run payroll and
+        time tracking with less stress and fewer surprises on payday.
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main.about {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  main.about h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  main.about h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  main.about p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+
+  main.about ul {
+    margin: 0.75rem 0 0.75rem 1.25rem;
+    line-height: 1.6;
+  }
+</style>
