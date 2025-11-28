@@ -36,12 +36,10 @@
     "status": "active"
   },
   {
-    "id": "tyms",
-    "name": "Tyms",
-    "category": "accounting",
-    "who_it_helps": "Small businesses that want modern accounting with automation instead of manual spreadsheets.",
-    "landing_url": "https://tyms.io/",
-    "affiliate_url": null,
-    "status": "active"
-  }
+     "id": "tyms",
+     "name": "Tyms / Adam (AI Accountant)",
+     "role": "AI-powered accounting and bookkeeping assistant for small businesses and crews",
+     "website": "https://www.useadam.io/",
+     "affiliateUrl": "https://app.useadam.io/auth/register?linkId=lp_914554&sourceId=payrollforcrews&tenantId=tyms"
+   }
 ]
