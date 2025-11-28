@@ -5,32 +5,29 @@
     {
       "slug": "construction-payroll-setup",
       "status": "published",
+      "action": "enrich",
       "title": "Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews",
       "primaryKeyword": "construction payroll for small crews",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam", "webhr", "lano", "tyms"],
-      "pillarId": "construction-payroll",
-      "action": "enrich"
+      "mainProducts": ["timecamp", "connecteam", "webhr", "lano", "tyms"]
     },
     {
       "slug": "switching-payroll-mid-year",
       "status": "published",
+      "action": "enrich",
       "title": "How to Switch Payroll Providers Mid-Year Without Losing Your Mind",
       "primaryKeyword": "switch payroll providers mid year",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano"],
-      "pillarId": "switching-payroll",
-      "action": "enrich"
+      "mainProducts": ["webhr", "lano"]
     },
     {
       "slug": "w2-and-1099-payroll",
       "status": "published",
+      "action": "enrich",
       "title": "How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors",
       "primaryKeyword": "w2 and 1099 workers payroll",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano", "timecamp", "connecteam", "tyms"],
-      "pillarId": "mixed-w2-1099",
-      "action": "enrich"
+      "mainProducts": ["webhr", "lano", "timecamp", "connecteam", "tyms"]
     },
     {
       "slug": "time-tracking-rules-for-foremen",
@@ -38,9 +35,7 @@
       "title": "Simple Time Tracking Rules for Foremen So Payroll Stops Being a Mess",
       "primaryKeyword": "time tracking rules for construction foremen",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam"],
-      "pillarId": "time-tracking",
-      "action": "write"
+      "mainProducts": ["timecamp", "connecteam"]
     },
     {
       "slug": "multi-state-construction-payroll",
@@ -48,9 +43,7 @@
       "title": "Running Construction Payroll Across Multiple States Without Getting Burned",
       "primaryKeyword": "multi state construction payroll",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano"],
-      "pillarId": "construction-payroll",
-      "action": "write"
+      "mainProducts": ["webhr", "lano"]
     },
     {
       "slug": "job-costing-labor-small-crews",
@@ -58,9 +51,7 @@
       "title": "How to See Your Labor Cost by Job When You Only Have a Small Crew",
       "primaryKeyword": "job costing labor small construction company",
       "intent": "how_to",
-      "mainProducts": ["tyms", "timecamp", "connecteam"],
-      "pillarId": "accounting-job-costing",
-      "action": "write"
+      "mainProducts": ["tyms", "timecamp", "connecteam"]
     },
     {
       "slug": "switching-from-paper-timesheets",
@@ -68,9 +59,7 @@
       "title": "Getting Off Paper Timesheets: A 30 Day Plan for Small Construction Crews",
       "primaryKeyword": "switch from paper timesheets construction",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam"],
-      "pillarId": "time-tracking",
-      "action": "write"
+      "mainProducts": ["timecamp", "connecteam"]
     },
     {
       "slug": "certified-payroll-basics",
@@ -78,9 +67,7 @@
       "title": "Certified Payroll Basics for Small Contractors Who Just Won a Public Job",
       "primaryKeyword": "certified payroll for small contractors",
       "intent": "explainer",
-      "mainProducts": ["webhr", "lano"],
-      "pillarId": "construction-payroll",
-      "action": "write"
+      "mainProducts": ["webhr", "lano"]
     },
     {
       "slug": "overtime-mistakes-small-crews",
@@ -88,9 +75,7 @@
       "title": "The Most Common Overtime Mistakes Small Crew-Based Businesses Make",
       "primaryKeyword": "overtime rules small construction company",
       "intent": "problem",
-      "mainProducts": ["webhr", "timecamp", "connecteam"],
-      "pillarId": "construction-payroll",
-      "action": "write"
+      "mainProducts": ["webhr", "timecamp", "connecteam"]
     },
     {
       "slug": "payroll-checklist-pay-period",
@@ -98,9 +83,16 @@
       "title": "Payroll Checklist for Every Pay Period When You Run Field Crews",
       "primaryKeyword": "payroll checklist construction crew",
       "intent": "checklist",
-      "mainProducts": ["timecamp", "connecteam", "webhr", "tyms"],
-      "pillarId": "construction-payroll",
-      "action": "write"
+      "mainProducts": ["timecamp", "connecteam", "webhr", "tyms"]
+    },
+    {
+      "slug": "ai-accountant-for-crews-adam-by-tyms",
+      "status": "published",
+      "action": "enrich",
+      "title": "Should You Use an AI Accountant for Your Crew? Adam by Tyms for Small Businesses",
+      "primaryKeyword": "ai accountant small business",
+      "intent": "explainer",
+      "mainProducts": ["tyms"]
     }
   ]
 }

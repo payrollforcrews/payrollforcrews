@@ -229,6 +229,26 @@ For 1099 contractors, you do not withhold taxes. Instead, you report payments ov
 
 On job sites, avoid paying contractors through your payroll system to prevent withholding mistakes. Keep clear records of hours, job codes, and payments for both groups. Use software that separates worker types and automates tax form generation to reduce risk and keep your accounting clean.
 
+## How to manage payroll for W2 and 1099 workers on job sites: What owners need to know
+
+Managing payroll for crews with both W2 employees and 1099 contractors on busy job sites requires a clear process that fits your daily reality. Here are some practical tips:
+
+- Use a single time tracking system that clearly identifies each worker’s classification. This avoids confusion when approving hours and paying workers.
+- Have foremen approve time daily or weekly. This helps catch errors early and keeps things moving smoothly.
+- Run payroll for W2 employees on a fixed schedule, making sure to apply overtime rules and withhold taxes properly.
+- Pay contractors separately, either based on approved time entries or invoices. Keep these payments out of your payroll system to avoid tax withholding mistakes.
+- Link all payments back to jobs for accurate job costing and easier accounting.
+
+This simple approach keeps your crews paid on time and your records clean. For more on setting up payroll and time tracking for crews, check out [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](https://payrollforcrews.com/blog/construction-payroll-setup/).
+
+## Managing payroll for W2 and 1099 workers on job sites: Why a clear process matters
+
+On busy job sites, juggling payroll for both employees and contractors can get messy fast. A clear process that fits your crew’s daily work helps prevent mistakes and saves time.
+
+For example, if your foremen approve time daily, you catch errors before payroll runs. Paying contractors separately keeps taxes straight and avoids surprises. Linking all payments back to jobs means your job costing stays accurate, which helps with billing and profitability.
+
+This kind of simple, consistent routine is what keeps crews paid on time and owners sane.
+
 ## Common questions from owners
 
 **Do I need to withhold taxes for 1099 contractors?**
