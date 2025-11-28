@@ -3,11 +3,15 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
+  "dev": "astro dev",
+  "build": "astro build",
+  "preview": "astro preview",
+  "astro": "astro",
+  "seo:expand": "node agent/seo-expand.js",
+  "seo:enrich": "node agent/content-enrich.js",
+  "seo:refresh": "npm run seo:expand && npm run seo:enrich"
+}
+,
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",
     "@astrojs/rss": "^4.0.14",
