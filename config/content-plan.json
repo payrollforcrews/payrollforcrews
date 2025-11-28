@@ -8,7 +8,9 @@
       "title": "Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews",
       "primaryKeyword": "construction payroll for small crews",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam", "webhr", "lano", "tyms"]
+      "mainProducts": ["timecamp", "connecteam", "webhr", "lano", "tyms"],
+      "pillarId": "construction-payroll",
+      "action": "enrich"
     },
     {
       "slug": "switching-payroll-mid-year",
@@ -16,7 +18,9 @@
       "title": "How to Switch Payroll Providers Mid-Year Without Losing Your Mind",
       "primaryKeyword": "switch payroll providers mid year",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano"]
+      "mainProducts": ["webhr", "lano"],
+      "pillarId": "switching-payroll",
+      "action": "enrich"
     },
     {
       "slug": "w2-and-1099-payroll",
@@ -24,7 +28,9 @@
       "title": "How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors",
       "primaryKeyword": "w2 and 1099 workers payroll",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano", "timecamp", "connecteam", "tyms"]
+      "mainProducts": ["webhr", "lano", "timecamp", "connecteam", "tyms"],
+      "pillarId": "mixed-w2-1099",
+      "action": "enrich"
     },
     {
       "slug": "time-tracking-rules-for-foremen",
@@ -32,7 +38,9 @@
       "title": "Simple Time Tracking Rules for Foremen So Payroll Stops Being a Mess",
       "primaryKeyword": "time tracking rules for construction foremen",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam"]
+      "mainProducts": ["timecamp", "connecteam"],
+      "pillarId": "time-tracking",
+      "action": "write"
     },
     {
       "slug": "multi-state-construction-payroll",
@@ -40,7 +48,9 @@
       "title": "Running Construction Payroll Across Multiple States Without Getting Burned",
       "primaryKeyword": "multi state construction payroll",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano"]
+      "mainProducts": ["webhr", "lano"],
+      "pillarId": "construction-payroll",
+      "action": "write"
     },
     {
       "slug": "job-costing-labor-small-crews",
@@ -48,7 +58,9 @@
       "title": "How to See Your Labor Cost by Job When You Only Have a Small Crew",
       "primaryKeyword": "job costing labor small construction company",
       "intent": "how_to",
-      "mainProducts": ["tyms", "timecamp", "connecteam"]
+      "mainProducts": ["tyms", "timecamp", "connecteam"],
+      "pillarId": "accounting-job-costing",
+      "action": "write"
     },
     {
       "slug": "switching-from-paper-timesheets",
@@ -56,7 +68,9 @@
       "title": "Getting Off Paper Timesheets: A 30 Day Plan for Small Construction Crews",
       "primaryKeyword": "switch from paper timesheets construction",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam"]
+      "mainProducts": ["timecamp", "connecteam"],
+      "pillarId": "time-tracking",
+      "action": "write"
     },
     {
       "slug": "certified-payroll-basics",
@@ -64,7 +78,9 @@
       "title": "Certified Payroll Basics for Small Contractors Who Just Won a Public Job",
       "primaryKeyword": "certified payroll for small contractors",
       "intent": "explainer",
-      "mainProducts": ["webhr", "lano"]
+      "mainProducts": ["webhr", "lano"],
+      "pillarId": "construction-payroll",
+      "action": "write"
     },
     {
       "slug": "overtime-mistakes-small-crews",
@@ -72,7 +88,9 @@
       "title": "The Most Common Overtime Mistakes Small Crew-Based Businesses Make",
       "primaryKeyword": "overtime rules small construction company",
       "intent": "problem",
-      "mainProducts": ["webhr", "timecamp", "connecteam"]
+      "mainProducts": ["webhr", "timecamp", "connecteam"],
+      "pillarId": "construction-payroll",
+      "action": "write"
     },
     {
       "slug": "payroll-checklist-pay-period",
@@ -80,7 +98,9 @@
       "title": "Payroll Checklist for Every Pay Period When You Run Field Crews",
       "primaryKeyword": "payroll checklist construction crew",
       "intent": "checklist",
-      "mainProducts": ["timecamp", "connecteam", "webhr", "tyms"]
+      "mainProducts": ["timecamp", "connecteam", "webhr", "tyms"],
+      "pillarId": "construction-payroll",
+      "action": "write"
     }
   ]
 }
