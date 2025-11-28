@@ -7,9 +7,15 @@ import axios from 'axios';
 dotenv.config();
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const GOOGLE_SEARCH_API_KEY = process.env.GOOGLE_SEARCH_API_KEY;
 
 if (!OPENAI_API_KEY) {
   console.error('Missing OPENAI_API_KEY in .env');
+  process.exit(1);
+}
+
+if (!GOOGLE_SEARCH_API_KEY) {
+  console.error('Missing GOOGLE_SEARCH_API_KEY in .env');
   process.exit(1);
 }
 
@@ -83,9 +89,44 @@ async function callOpenAI(prompt) {
   }
 }
 
+async function fetchGoogleResults(query, cx, num = 5) {
+  const url = 'https://www.googleapis.com/customsearch/v1';
+
+  try {
+    const res = await axios.get(url, {
+      params: {
+        key: GOOGLE_SEARCH_API_KEY,
+        cx,
+        q: query,
+        num
+      },
+      timeout: 15000
+    });
+
+    const items = res.data.items || [];
+    return items.map((item) => ({
+      title: item.title,
+      link: item.link,
+      snippet: item.snippet
+    }));
+  } catch (err) {
+    console.error(`Google search failed for "${query}":`, err.message);
+    return [];
+  }
+}
+
 async function main() {
   const site = readJson('site.json');
   const contentPlan = readJson('content-plan.json');
+  const searchConfig = readJson('search.json');
+
+  const gps = searchConfig.googleProgrammableSearch;
+  if (!gps || !gps.enabled || !gps.cx) {
+    console.error(
+      'googleProgrammableSearch not properly configured in config/search.json'
+    );
+    process.exit(1);
+  }
 
   let keywordMap = [];
   const keywordMapPath = path.join(configDir, 'keyword-map.json');
@@ -106,10 +147,9 @@ async function main() {
   }
 
   console.log(
-    `Found ${publishedItems.length} published items. Generating SEO questions...`
+    `Found ${publishedItems.length} published items. Generating SEO questions with Google SERP context...`
   );
 
-  // Simple in-memory set to avoid duplicates
   const existingKeys = new Set(
     keywordMap.map((k) => `${k.pillarId}::${k.slug}::${k.query}`)
   );
@@ -124,15 +164,25 @@ async function main() {
     } = item;
 
     console.log(`\nProcessing: ${slug} (${title})`);
+    console.log(`Running Google search for: "${primaryKeyword}"`);
 
-    const pillarLabel =
-      site.topicClusters?.find((cluster) =>
-        cluster.toLowerCase().includes('construction')
-      ) || pillarId;
+    const results = await fetchGoogleResults(
+      primaryKeyword,
+      gps.cx,
+      gps.resultsPerQuery || 5
+    );
+
+    const serpSummary = results
+      .map(
+        (r, idx) =>
+          `${idx + 1}. Title: ${r.title}\n   Snippet: ${r.snippet}\n   URL: ${r.link}`
+      )
+      .join('\n');
 
     const prompt = `
-Given this existing article on the site "${site.siteName}":
+You are helping plan and enrich SEO content for the site "${site.siteName}".
 
+Existing article:
 - Title: "${title}"
 - Slug: "${slug}"
 - Primary keyword: "${primaryKeyword}"
@@ -140,11 +190,16 @@ Given this existing article on the site "${site.siteName}":
 - Pillar id: "${pillarId}"
 - Audience: "${site.audience?.description || ''}" (crew-based owners with 5-50 workers)
 
+You also have a Google search results snapshot for the primary keyword. These are the top results:
+
+${serpSummary || '(No external results available)'}
+
 Your job:
 
-1. Suggest 5-10 high intent search queries a small crew owner might actually type into Google that this article should either:
-   - fully answer already, or
-   - partially answer and could be expanded to cover.
+1. From the perspective of a small crew owner searching for this topic, suggest 5-10 high intent search queries that:
+   - Are closely related to the primary keyword and the SERP above, and
+   - This article should either fully answer, or
+   - Partially answer and could be expanded to cover.
 
 2. Mark each query as one of:
    - "pillar" - broad topic query closely aligned with the main article focus
@@ -153,7 +208,7 @@ Your job:
 
 3. For each query, suggest:
    - "sectionType": "new-section" or "faq-item"
-   - "priority": 1 (high), 2 (medium), or 3 (low) based on value to small crew owners.
+   - "priority": 1 (high), 2 (medium), or 3 (low) based on value to small crew owners and alignment with the SERP.
 
 Output JSON only in this exact shape:
 

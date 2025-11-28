@@ -268,5 +268,482 @@
     "type": "support",
     "sectionType": "new-section",
     "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "best time tracking methods for construction crews",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to calculate overtime for construction workers",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "what payroll taxes do small construction businesses pay",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to handle payroll for multiple job sites",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "best payroll software for small construction crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to track labor costs by job for small crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how often should I run payroll for a 10 to 50 person crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "what is the best way to pay construction crews on the go",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to avoid payroll mistakes in small construction businesses",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "best payroll providers for small crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "what to do with payroll taxes when switching providers mid year",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to avoid payroll errors during provider switch",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "can I switch payroll providers without redoing year to date info",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how long does it take to switch payroll providers",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "impact of switching payroll providers on job costing",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 3
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to communicate payroll provider change to crew members",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 3
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "common mistakes when switching payroll providers mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to run payroll for w2 and 1099 workers",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "can i pay a worker as both w2 and 1099 in the same year",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to classify workers as w2 or 1099 for payroll",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "best payroll software for managing w2 and 1099 workers",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to handle payroll deductions for w2 employees",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "do 1099 contractors require payroll taxes withheld",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "steps to set up payroll for a mixed crew of employees and contractors",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to track hours for w2 employees vs 1099 contractors",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to track crew hours and payroll per jobsite",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "timesheet apps for construction crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to manage payroll and accounting for small construction crews",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "what payroll and HR challenges do small construction crews face",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "can small construction crews use PEOs for payroll and HR",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to keep perfect time records for construction crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "what is the best payroll setup for 10 to 50 person construction crews",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how do I handle payroll compliance for small construction crews",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to switch payroll providers mid year without errors",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "steps to transfer year-to-date payroll data when changing providers",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "risks of switching payroll providers mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "can I switch payroll providers mid year with a small crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to handle W-2s when switching payroll providers mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "common misconceptions about switching payroll providers mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "best time to switch payroll providers for small crew businesses",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to minimize disruption when switching payroll providers mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "do new payroll providers import previous payroll data automatically",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "switching-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "what transitional services do payroll providers offer for mid year switches",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "How to manage payroll taxes for W2 and 1099 workers on construction crews",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "Differences in tax reporting for W2 employees versus 1099 contractors",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "When to classify a worker as W2 employee or 1099 contractor for small crews",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "How to file payroll taxes for mixed W2 and 1099 crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "What forms do I need to provide to W2 employees and 1099 contractors",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "Do I have to withhold taxes from 1099 contractors?",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "How to handle unemployment tax for W2 employees and 1099 contractors",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "Can I switch a worker from 1099 contractor to W2 employee mid-project?",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "What are the penalties for misclassifying workers as 1099 contractors?",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "mixed-w2-1099",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "How to track time and job costs differently for W2 and 1099 workers",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
   }
 ]
