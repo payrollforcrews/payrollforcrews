@@ -1,0 +1,52 @@
+[
+  {
+    "id": "construction-payroll",
+    "pillar": "Construction and jobsite payroll",
+    "seedKeywords": [
+      "construction payroll for small contractors",
+      "how to set up construction payroll",
+      "jobsite payroll process"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "time-tracking",
+    "pillar": "Time tracking and scheduling for crews",
+    "seedKeywords": [
+      "time tracking for construction crews",
+      "crew time tracking app",
+      "foreman timesheet rules"
+    ],
+    "priority": 1
+  },
+  {
+    "id": "switching-payroll",
+    "pillar": "Switching payroll providers mid year",
+    "seedKeywords": [
+      "switch payroll provider mid year",
+      "change payroll company mid year construction",
+      "move payroll to new provider without errors"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "mixed-w2-1099",
+    "pillar": "Mixed W2 and 1099 worker setups",
+    "seedKeywords": [
+      "can i pay construction workers 1099",
+      "w2 vs 1099 construction crews",
+      "how to handle w2 and 1099 payroll together"
+    ],
+    "priority": 2
+  },
+  {
+    "id": "accounting-job-costing",
+    "pillar": "Basic accounting and job costing for small crews",
+    "seedKeywords": [
+      "job costing for small construction business",
+      "simple construction accounting system",
+      "track job costs for crews"
+    ],
+    "priority": 3
+  }
+]

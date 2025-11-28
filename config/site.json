@@ -42,5 +42,23 @@
       "Avoid fluffy intros; get to the point in the first few sentences.",
       "Always include at least one practical checklist or step-by-step sequence."
     ]
+  },
+  "links": {
+    "internalLinks": "Link to other relevant articles on payrollforcrews.com wherever it genuinely helps the reader go deeper.",
+    "affiliateLinks": "Use /go/... redirect links or the affiliateUrl from config/products.json. Do not paste raw affiliate URLs in articles if a /go/... route exists."
+  },
+  "technical": {
+    "contentPath": "src/content/blog",
+    "productsConfigPath": "config/products.json",
+    "contentPlanPath": "config/content-plan.json",
+    "markdownFrontmatter": {
+      "requiredFields": [
+        "title",
+        "description",
+        "pubDate",
+        "heroImage"
+      ],
+      "heroImagePattern": "../../assets/blog-placeholder-*.jpg"
+    }
   }
 }
