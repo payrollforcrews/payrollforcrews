@@ -116,6 +116,28 @@ Use that as the baseline for any new tools you try.
 
 Switching while things are on fire just gives you two fires.
 
+## Common questions about construction payroll for small crews
+
+### Is it worth switching payroll providers if I only have a small crew?
+
+Yes, if your current system forces you to fix hours every pay period or makes multi-jobsite reporting painful, a switch can save you real time and reduce errors. You do not need enterprise software, just a setup that fits how your crews actually work.
+
+### Do I need a different payroll system for W2 employees and 1099 subcontractors?
+
+No. The key is using tools that clearly distinguish between employees and contractors and handle them with the right tax rules. Your time tracking and payroll system should store worker type per person and keep contractor payments out of your W2 runs.
+
+### When is the best time of year to change payroll systems?
+
+January is the cleanest, but if you follow a clear export–test–live process, you can switch mid-year without breaking paychecks or tax records. The real “best time” is when your current system is consistently causing mistakes or absorbing too much of your attention.
+
+### What is the minimum setup I need for a 10 to 50 person construction crew?
+
+At a minimum, you want:
+- One time tracking tool that works in the field and ties hours to jobs.
+- One payroll system that supports your states and your mix of W2 and 1099 workers.
+- One accounting tool that can show labor cost by job without spreadsheet gymnastics.
+
+
 ---
 
 If you want help mapping this pattern to your exact crew size and mix of workers, keep an eye on the next guides on Payroll for Crews. We will go deeper into multi state payroll and certified payroll for public jobs.
