@@ -109,13 +109,44 @@ A simple message is enough:
 
 Then back that up by being reachable for the first pay period or two and correcting small mistakes fast.
 
-## Common mistakes to avoid
+## How to avoid payroll mistakes when switching providers
 
-A few things to watch out for:
+Switching payroll providers mid-year can cause mistakes if you rush or miss details. For example, if your crew works overtime regularly, make sure the new system applies your state’s overtime rules correctly from day one. A common crew scenario is a foreman who notices paychecks are lower because overtime wasn’t calculated right. Catch this during your test run.
 
-- Turning off the old system before you have exported your year-to-date history.
-- Forgetting to handle benefit deductions or garnishments in the new setup.
-- Running two live payrolls in the same period because “auto run” was still turned on.
-- Assuming the new system will “just know” your overtime rules.
+Also, double-check that all deductions, like health benefits or wage garnishments, transfer properly. If your old provider had custom codes, confirm your new system supports them or find equivalent options.
 
-If you and your new provider follow a clear export → test → live pattern, a mid-year switch does not have to be painful. In many cases, it is the only way to stop wasting time every pay period on a system that outgrew your crews years ago.
+Finally, keep your old payroll system active until you confirm the new one runs smoothly. This avoids double payments or missed paychecks, which can frustrate your crew and slow down your jobsite.
+
+## Steps to transfer employee payroll data mid-year
+
+Transferring payroll data mid-year is mostly about getting the right reports and importing them cleanly. Start by exporting year-to-date wages, tax withholdings, and any contributions for every employee and contractor. Include inactive workers if you might pay them again this year.
+
+Next, provide your new payroll provider with this data so they can set up accurate tax filings and avoid duplicate payments. For crews working across states, confirm multi-state tax data is included.
+
+If your crew has both W2 employees and 1099 subcontractors, make sure you separate their data clearly. You can find more details in our guide on [handling payroll for W2 employees and 1099 contractors](https://payrollforcrews.com/blog/w2-and-1099-payroll/).
+
+## Common questions from owners
+
+### Can I switch payroll providers without disrupting crew pay?
+
+Yes. The key is to keep running payroll on your old system while testing the new one. Only switch fully once you confirm the new system calculates pay correctly and all data is accurate. Communicate clearly with your crew so they know pay dates and amounts won’t change.
+
+### What happens to tax filings when I switch payroll providers mid-year?
+
+Your new provider needs your year-to-date tax filings and wage reports to handle future filings correctly. They will continue submitting taxes for the rest of the year, but you must make sure all prior filings are accounted for. Keep copies of all tax documents from your old provider in case of questions.
+
+### What should I do if my payroll provider changes mid-year and I notice errors?
+
+Report errors immediately to your new provider and keep your old system accessible until issues are resolved. Common errors include incorrect tax withholdings or missing overtime pay. Fixing these quickly protects your crew and keeps your business compliant.
+
+### How do I transfer employee payroll data mid-year without mistakes?
+
+Export all year-to-date payroll reports, including wages, taxes, and deductions. Share these with your new provider and run test payrolls to catch any discrepancies. Confirm that all employee details, including addresses and tax info, are up to date.
+
+### What are the biggest mistakes to avoid when switching payroll providers mid-year?
+
+Avoid turning off your old system before exporting all necessary data. Don’t assume the new system will automatically apply your overtime or deduction rules. Also, watch out for running two payrolls in the same period by accident. Following a clear export, test, and live run process helps prevent these issues.
+
+---
+
+For more details on setting up payroll for your crew, see our [best payroll and time tracking setup for 10 to 50 person construction crews](https://payrollforcrews.com/blog/construction-payroll-setup/).

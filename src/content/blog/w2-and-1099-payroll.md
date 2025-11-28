@@ -102,6 +102,43 @@ At least once a month:
 
 If your time tracking and payroll tools can both export to your accounting tool cleanly, this reconciliation is much faster.
 
+## How to classify workers correctly as W2 or 1099
+
+Getting worker classification right is crucial to avoid headaches and penalties. The key question is control: who controls how, when, and where the work is done?
+
+- **W2 employees** usually work under your direction, follow your schedule, and use your tools.
+- **1099 contractors** run their own business, decide how to do the job, and may work for multiple clients.
+
+For example, if you have a carpenter who comes to your site daily, uses your equipment, and follows your schedule, they are likely a W2 employee. But if you hire a specialized subcontractor who sets their own hours and brings their own tools, they are probably a 1099 contractor.
+
+If you are unsure, consult a professional. Misclassification can lead to back taxes and fines.
+
+## Managing payroll compliance for mixed W2 and 1099 crews on job sites
+
+Compliance means following tax laws and labor rules for each worker type. For W2 employees, you must withhold income taxes, Social Security, and Medicare, and pay unemployment taxes. You also need to follow overtime and wage laws.
+
+For 1099 contractors, you do not withhold taxes. Instead, you report payments over $600 on Form 1099-NEC at year end. Contractors handle their own taxes.
+
+On busy jobsites, keep these points in mind:
+
+- Do not pay contractors through your payroll system to avoid withholding mistakes.
+- Keep clear records of hours, job codes, and payments for both groups.
+- Use systems that separate worker types and automate tax forms.
+
+This reduces your risk and keeps your accounting clean.
+
+## How to manage payroll for W2 and 1099 workers on job sites
+
+On the jobsite, your focus is on getting crews paid accurately and on time. Here is a practical approach:
+
+- Use one time tracking system that tags workers as employees or contractors.
+- Have foremen approve time daily or weekly to catch errors early.
+- Run payroll for W2 employees on a regular schedule, applying overtime and deductions.
+- Pay contractors separately based on approved time or invoices.
+- Keep all payments tied to jobs for accurate job costing.
+
+This approach keeps your crews happy and your books in order. For more on setting up payroll and time tracking for crews, see [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](https://payrollforcrews.com/blog/construction-payroll-setup/).
+
 ## Common pitfalls with mixed crews
 
 A few things to watch out for:
@@ -124,3 +161,29 @@ If you are:
 …then it is worth paying a professional for an hour or two of advice. Once you know the right classification, you can set up your systems to follow it without constant second guessing.
 
 You do not need enterprise HR software to handle a mixed crew. You just need tools that know the difference between employees and contractors, and a weekly rhythm you can stick to even on busy jobs.
+
+## Common questions from owners
+
+**Do I need to withhold taxes for 1099 contractors?**
+
+No. You do not withhold income or payroll taxes for 1099 contractors. They are responsible for paying their own taxes. You only report what you paid them at year end using Form 1099-NEC if payments exceed $600.
+
+**What forms do I need to file for W2 and 1099 payroll?**
+
+For W2 employees, you file Forms W-2 and W-3 with the IRS and provide W-2s to your employees. For 1099 contractors, you file Form 1099-NEC to report payments over $600 and send copies to the contractors.
+
+**Can 1099 contractors receive benefits like W2 employees?**
+
+Generally, no. Benefits like health insurance, retirement plans, and paid time off are typically only for W2 employees. Offering benefits to contractors can blur classification lines and cause compliance issues.
+
+**How do I avoid mixing up employees and contractors in time tracking?**
+
+Use a system that tags each worker by type and train foremen to approve time accordingly. Keep one source of truth for worker classification and update it when roles change.
+
+**What happens if I pay a contractor through payroll by mistake?**
+
+Paying a contractor through payroll can cause incorrect tax withholding and reporting. Fix it quickly by separating payments and consulting your accountant. Avoid doing this repeatedly to prevent penalties.
+
+---
+
+For more on handling changes in payroll systems without headaches, check out [our guide to switching providers](https://payrollforcrews.com/blog/switching-payroll-mid-year/).

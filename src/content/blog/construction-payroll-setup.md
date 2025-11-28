@@ -116,7 +116,55 @@ Use that as the baseline for any new tools you try.
 
 Switching while things are on fire just gives you two fires.
 
-## Common questions about construction payroll for small crews
+## Best ways to track time for construction crews under 50
+
+For crews of this size, time tracking needs to be straightforward and reliable. Your crew members are often on the move, so a mobile-friendly app that works offline is key. GPS or geofencing features help confirm workers are on site, reducing buddy punching or missed punches.
+
+Consider these practical points:
+
+- Foremen should be able to quickly see who clocked in or out without digging through menus.
+- Crew members should be able to switch jobs easily if they move between sites in a day.
+- If your crew uses paper timesheets now, start by digitizing just one crew’s time to test the process.
+
+Simple daily check-ins via app or text can replace the old paper stack and reduce errors. The goal is to get accurate hours tied to the right job with minimal hassle.
+
+## What payroll software works best for small construction crews?
+
+The best payroll software for small crews handles your mix of W2 employees and 1099 subcontractors, supports multiple states if needed, and integrates smoothly with your time tracking system.
+
+Look for these features:
+
+- Easy import of time data from your chosen tracking tool.
+- Clear breakdown of taxes, deductions, and net pay for each worker.
+- Support teams familiar with construction crews, not just office payroll.
+
+If you want to learn more about managing both employee types, check out our guide on [handling payroll with W2 employees and 1099 contractors](https://payrollforcrews.com/blog/w2-and-1099-payroll/).
+
+## How to set up construction payroll for small crews without headaches
+
+Setting up payroll for a small crew means balancing accuracy with simplicity. Start by picking tools that fit your crew’s size and work style. Test each part separately before connecting them.
+
+Key steps:
+
+- Choose a time tracking tool that your crew can actually use.
+- Pick payroll software that matches your worker mix and state rules.
+- Make sure accounting tools can handle job costing without extra manual work.
+
+If you want tips on switching payroll systems without disrupting paychecks, see our [guide to switching providers mid-year](https://payrollforcrews.com/blog/switching-payroll-mid-year/).
+
+## Common questions from owners
+
+### How often should I run payroll for a small construction crew?
+
+Most small crews run payroll every two weeks or monthly. Biweekly pay periods help keep workers happy and make overtime calculations more straightforward. Monthly can work if your crew is stable and you have good time tracking.
+
+### Can I integrate time tracking with payroll for my construction crew?
+
+Yes. The best setups let you export or sync time data directly into payroll. This reduces errors and saves admin time. Make sure your time tracking tool and payroll system support compatible file formats or direct integrations.
+
+### How do I calculate payroll taxes for construction crews?
+
+Payroll taxes depend on worker type, location, and pay frequency. W2 employees have Social Security, Medicare, and unemployment taxes withheld. 1099 contractors handle their own taxes, but you still report payments. Payroll software usually automates these calculations based on worker classification and state rules.
 
 ### Is it worth switching payroll providers if I only have a small crew?
 
@@ -125,18 +173,6 @@ Yes, if your current system forces you to fix hours every pay period or makes mu
 ### Do I need a different payroll system for W2 employees and 1099 subcontractors?
 
 No. The key is using tools that clearly distinguish between employees and contractors and handle them with the right tax rules. Your time tracking and payroll system should store worker type per person and keep contractor payments out of your W2 runs.
-
-### When is the best time of year to change payroll systems?
-
-January is the cleanest, but if you follow a clear export–test–live process, you can switch mid-year without breaking paychecks or tax records. The real “best time” is when your current system is consistently causing mistakes or absorbing too much of your attention.
-
-### What is the minimum setup I need for a 10 to 50 person construction crew?
-
-At a minimum, you want:
-- One time tracking tool that works in the field and ties hours to jobs.
-- One payroll system that supports your states and your mix of W2 and 1099 workers.
-- One accounting tool that can show labor cost by job without spreadsheet gymnastics.
-
 
 ---
 
