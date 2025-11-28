@@ -39,7 +39,35 @@ function stripFences(text) {
   return cleaned.trim();
 }
 
-async function callOpenAIForMarkdown(prompt) {
+function splitFrontmatter(content) {
+  // Expect YAML frontmatter at the top: --- ... ---
+  if (!content.startsWith('---')) {
+    return { frontmatter: null, body: content };
+  }
+
+  const lines = content.split('\n');
+  if (lines[0].trim() !== '---') {
+    return { frontmatter: null, body: content };
+  }
+
+  let secondIdx = -1;
+  for (let i = 1; i < lines.length; i++) {
+    if (lines[i].trim() === '---') {
+      secondIdx = i;
+      break;
+    }
+  }
+
+  if (secondIdx === -1) {
+    return { frontmatter: null, body: content };
+  }
+
+  const frontmatter = lines.slice(0, secondIdx + 1).join('\n');
+  const body = lines.slice(secondIdx + 1).join('\n');
+  return { frontmatter, body };
+}
+
+async function callOpenAIForBody(prompt) {
   const url = 'https://api.openai.com/v1/chat/completions';
 
   const res = await axios.post(
@@ -52,7 +80,9 @@ async function callOpenAIForMarkdown(prompt) {
           role: 'system',
           content:
             'You are an editor for a niche site about payroll, time tracking, and job costing for small crew-based businesses. ' +
-            'You only return updated markdown content for the article. No explanations, no code fences. ' +
+            'You only return the UPDATED BODY of a markdown article, not the frontmatter. ' +
+            'Do not wrap the result in code fences. Do not include YAML frontmatter. ' +
+            'Do not escape characters with unnecessary backslashes. ' +
             'Do not use em dashes (—). Use commas, parentheses, or periods instead.'
         },
         {
@@ -76,10 +106,8 @@ async function callOpenAIForMarkdown(prompt) {
 
 function selectSuggestionsForSlug(keywordMap, slug) {
   const all = keywordMap.filter((k) => k.slug === slug);
-
   if (!all.length) return [];
 
-  // Sort by priority (1 = best), then type so pillar/support tend to come before faq
   const sorted = [...all].sort((a, b) => {
     const pa = a.priority ?? 2;
     const pb = b.priority ?? 2;
@@ -89,13 +117,13 @@ function selectSuggestionsForSlug(keywordMap, slug) {
     return 0;
   });
 
-  const newSections = sorted.filter(
-    (s) => s.sectionType === 'new-section'
-  ).slice(0, 3);
+  const newSections = sorted
+    .filter((s) => s.sectionType === 'new-section')
+    .slice(0, 3);
 
-  const faqs = sorted.filter(
-    (s) => s.sectionType === 'faq-item'
-  ).slice(0, 5);
+  const faqs = sorted
+    .filter((s) => s.sectionType === 'faq-item')
+    .slice(0, 5);
 
   return [...newSections, ...faqs];
 }
@@ -114,7 +142,6 @@ async function main() {
     return;
   }
 
-  // Build a list of other articles for internal links
   const internalTargets = contentPlan.items
     .filter((item) => item.status === 'published')
     .map((item) => ({
@@ -146,6 +173,14 @@ async function main() {
     }
 
     const articleContent = fs.readFileSync(mdPath, 'utf8');
+    const { frontmatter, body } = splitFrontmatter(articleContent);
+
+    if (!frontmatter) {
+      console.warn(
+        `Could not detect frontmatter for ${slug}, leaving file unchanged.`
+      );
+      continue;
+    }
 
     const otherArticles = internalTargets
       .filter((t) => t.slug !== slug)
@@ -158,23 +193,25 @@ async function main() {
       .join('\n');
 
     const prompt = `
-You are updating an existing markdown blog post for the site "${site.siteName}".
+You are updating the BODY of an existing markdown blog post for the site "${site.siteName}".
 
 Audience:
 ${site.audience?.description || 'Owners and managers who run small crew-based businesses.'}
 
-Tone guidelines:
+Tone:
 - ${site.contentStyle?.tone?.join(', ') || 'plain, direct, no jargon'}
 Rules:
-- Explain tradeoffs, use concrete crew scenarios, and keep intros tight.
-- Do not use em dashes (—). Use commas, parentheses, or periods instead.
+- Explain tradeoffs, use concrete crew scenarios, keep intros tight.
+- Do not use em dashes. Use commas, parentheses, or periods instead.
 
-Existing article markdown (frontmatter + body) is between <<<ARTICLE>>> and <<<END ARTICLE>>>.
-Keep the YAML frontmatter exactly as it is (same keys and values).
+FRONTMATTER (read only, do not change this):
+${frontmatter}
 
-<<<ARTICLE>>>
-${articleContent}
-<<<END ARTICLE>>>
+CURRENT BODY (what you are allowed to change) is between <<<BODY>>> and <<<END BODY>>>:
+
+<<<BODY>>>
+${body}
+<<<END BODY>>>
 
 You also have a set of search queries and suggestions to enrich this article:
 
@@ -192,7 +229,7 @@ Your job:
    - Use headings that feel like real questions or clear statements (not spammy keyword strings).
    - Weave in the queries in natural language, do not keyword stuff.
 
-2. Add a short FAQ section near the end of the article.
+2. Add a short FAQ section near the end of the BODY.
    - Use a heading like "Common questions from owners" or similar.
    - Include 3–5 Q&A pairs based on suggestions where sectionType is "faq-item".
    - Each question can echo how an owner would actually ask it.
@@ -206,33 +243,42 @@ For internal links:
 - Link to the correct URL for the slug, for example: https://${site.domain ||
       'payrollforcrews.com'}/blog/construction-payroll-setup/
 
-Do NOT:
-- Change the frontmatter.
-- Drastically rewrite the whole article.
-- Add salesy copy or tool shilling.
-
-Output:
-Return the full updated markdown file (frontmatter + body) with your additions applied.
-Return only the markdown. No explanations, no code fences.
+Important output rules:
+- Return ONLY the UPDATED BODY markdown (no frontmatter).
+- Do NOT wrap the result in backticks or code fences.
+- Do NOT include YAML frontmatter.
+- Do NOT escape characters unnecessarily (no leading backslashes before # or -).
 `;
 
     console.log(`\nEnriching article: ${slug} (${title})`);
 
-    let updated;
+    let updatedBody;
     try {
-      updated = await callOpenAIForMarkdown(prompt);
+      updatedBody = await callOpenAIForBody(prompt);
     } catch (err) {
       console.error(`OpenAI error while enriching ${slug}:`, err.message);
       continue;
     }
 
-    if (!updated || typeof updated !== 'string') {
+    if (!updatedBody || typeof updatedBody !== 'string') {
       console.error(`Unexpected response for ${slug}, skipping write.`);
       continue;
     }
 
-    fs.writeFileSync(mdPath, updated, 'utf8');
-    console.log(`Updated: ${slug}`);
+    // Simple sanity check: body should contain at least one heading or paragraph
+    if (!updatedBody.includes('#') && updatedBody.trim().length < 200) {
+      console.warn(
+        `Updated body for ${slug} looks too small or malformed, keeping original.`
+      );
+      continue;
+    }
+
+    // Backup original file
+    fs.writeFileSync(`${mdPath}.bak`, articleContent, 'utf8');
+
+    const newContent = `${frontmatter}\n${updatedBody.trimStart()}`;
+    fs.writeFileSync(mdPath, newContent, 'utf8');
+    console.log(`Updated: ${slug} (backup written to ${mdPath}.bak)`);
   }
 
   console.log('\nContent enrichment complete.');
