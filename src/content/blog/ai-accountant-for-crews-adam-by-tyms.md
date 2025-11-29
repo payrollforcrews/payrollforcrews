@@ -190,6 +190,28 @@ Small crew businesses juggle many moving parts every day. AI accountants like Ad
 
 This means you spend less time chasing receipts and more time managing crews and winning new jobs. Plus, you get faster answers to questions like which job is profitable or where costs are creeping up. That kind of insight can help you make smarter decisions on the fly.
 
+## What makes AI accountant software a good fit for small crews?
+
+Small crew businesses have unique challenges: multiple jobs running at once, variable costs, and tight margins. AI accountant software like Adam fits well when you want to:
+
+- Get your books clean without needing to learn accounting yourself  
+- Avoid the hassle of switching fully from tools like QuickBooks or Xero, but still want simpler access to your financials  
+- Ask straightforward questions about your money without digging through reports or spreadsheets  
+
+For example, a landscaping crew managing five jobs in a week can quickly see which jobs are profitable and which need attention, without waiting for a bookkeeper to catch up. This helps owners make faster decisions on where to focus their crews or adjust bids.
+
+If your business already has a trusted bookkeeper or uses complex job costing software, AI accounting might add less value. But for many small crews, it’s a way to get better financial control without hiring a full-time accountant.
+
+## How does AI accounting software improve financial visibility for small crews?
+
+Financial visibility is key for small crews to stay profitable. AI accounting software improves this by:
+
+- Automatically categorizing transactions like fuel, materials, and subcontractor payments  
+- Providing up-to-date dashboards and reports that show job profitability and cash flow  
+- Allowing you to ask plain-language questions like “How much did we spend on materials this month?” or “Are we making money on Job X?”  
+
+For example, a small electrical contractor can see in real time if a big job is running over budget and take action before it hurts profits. This kind of insight used to require a bookkeeper spending hours sorting data. Now, AI tools can deliver it fast and without extra effort.
+
 ## Common questions from owners
 
 **Can AI accountants handle payroll for small crews?**  
