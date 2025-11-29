@@ -205,7 +205,20 @@ Most AI accounting tools do not fully automate tax filing. They can prepare repo
 Adam can reduce the time you spend on bookkeeping and give you clearer financial insights, but it does not replace professional accountants or bookkeepers. You still need someone to review your books, handle complex tax issues, and provide advice. Think of Adam as a tool to make their job easier and your financial picture clearer.
 
 **How much training or setup does Adam require?**  
-Adam is designed to be user-friendly, with natural language interaction and automated categorization. You will need to connect bank accounts and review categories regularly at first. Over time, it learns your preferences and requires less hands-on work.  
+Adam is designed to be user-friendly, with natural language interaction and automated categorization. You will need to connect bank accounts and review categories regularly at first. Over time, it learns your preferences and requires less hands-on work.
+
+## How to try Adam by Tyms without blowing up your books
+
+If you decide to try Adam and you use this link:
+
+[Start Adam by Tyms with my link](/go/tyms)
+
+I may earn a commission if you stay on as a paying customer. It does not change your price, and it helps fund more deep-dive guides like this.
+
+If at some point I decide Adam is not a good fit for most small crew businesses, I will either update this page to say so or swap this recommendation for another tool that fits better.
+
+You should only sign up if you actually think an AI accounting assistant will save you more time and hassle than it costs.
+
 
 ---
 
