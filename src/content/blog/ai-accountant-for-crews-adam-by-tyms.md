@@ -219,7 +219,6 @@ If at some point I decide Adam is not a good fit for most small crew businesses,
 
 You should only sign up if you actually think an AI accounting assistant will save you more time and hassle than it costs.
 
-
 ---
 
 If you're still sorting out your payroll and time tracking setup, consider checking our [guide on getting a stable setup](https://payrollforcrews.com/blog/construction-payroll-setup/) and [how to handle payroll when you have both W2 employees and 1099 contractors](https://payrollforcrews.com/blog/w2-and-1099-payroll/). Getting those basics right will make any AI accounting tool more effective.

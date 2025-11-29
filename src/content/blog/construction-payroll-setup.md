@@ -262,6 +262,30 @@ For example, a foreman can clock crew hours by job on a mobile app, those hours 
 
 If you want to explore how automation can help, check out our article on [using AI accounting tools for small crews](https://payrollforcrews.com/blog/ai-accountant-for-crews-adam-by-tyms/).
 
+## How to set up construction payroll for small crews: a simple, step-by-step plan
+
+Setting up payroll for a 10 to 50 person construction crew can feel overwhelming. Breaking it down into clear steps helps keep things manageable and avoids mistakes.
+
+1. **Assess your crew’s makeup and work patterns.**  
+   Identify how many workers are W2 employees versus 1099 contractors, and whether your crews cross state lines or move between multiple jobs in a day.
+
+2. **Choose a time tracking tool that fits your crew.**  
+   Pick one that works offline, supports multiple job codes, and is easy for your least tech-savvy workers.
+
+3. **Select payroll software that handles your worker mix and state rules.**  
+   Make sure it can import time data directly from your tracking tool to avoid manual entry errors.
+
+4. **Test each system separately.**  
+   Run a trial week or pay period with your time tracking tool, then a dry run of payroll using that data.
+
+5. **Integrate accounting tools that automate job costing.**  
+   This keeps your books clean and saves time during tax season.
+
+6. **Roll out the new system gradually.**  
+   Start with one crew or jobsite, then expand once you’re confident everything works smoothly.
+
+This approach reduces headaches and keeps paychecks accurate. It also gives you time to train foremen and crew members without disrupting pay periods.
+
 ---
 
 ## Common questions from owners
