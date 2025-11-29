@@ -57,11 +57,12 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M9DTLXNERH"></script>
-<script>
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-M9DTLXNERH"></script>
+<script is:inline>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  function gtag(){ window.dataLayer.push(arguments); }
+  window.gtag = gtag;
 
+  gtag('js', new Date());
   gtag('config', 'G-M9DTLXNERH');
 </script>
