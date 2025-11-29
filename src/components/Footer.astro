@@ -9,6 +9,29 @@ const today = new Date();
   </p>
 </footer>
 
+<script is:inline>
+  // Track clicks on affiliate links that use /go/... paths
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    if (!target || !target.closest) return;
+
+    var link = target.closest('a');
+    if (!link) return;
+
+    var href = link.getAttribute('href') || '';
+    if (href.indexOf('/go/') !== 0) return;
+
+    if (typeof gtag === 'function') {
+      gtag('event', 'affiliate_click', {
+        event_category: 'affiliate',
+        event_label: href,
+        link_path: href,
+        page_path: window.location.pathname
+      });
+    }
+  });
+</script>
+
 <style>
   footer {
     padding: 2em 1em 6em 1em;
