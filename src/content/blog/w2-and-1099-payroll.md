@@ -283,6 +283,14 @@ Run payroll for W2 employees on a fixed schedule, applying overtime and withhold
 
 Link all payments back to jobs for accurate job costing and easier accounting. This approach reduces mistakes, keeps crews paid on time, and keeps your books clean.
 
+## How to manage payroll for W2 and 1099 workers on job sites: What you need to know
+
+Managing payroll for crews with both W2 employees and 1099 contractors on job sites requires a clear and practical process. Use one time tracking system that marks each worker as employee or contractor. Have foremen approve time daily or weekly to catch errors early.
+
+Run payroll for W2 employees on a fixed schedule, applying overtime and withholding taxes properly. Pay contractors separately based on approved time or invoices, and keep these payments out of your payroll system to avoid withholding mistakes.
+
+Link all payments back to jobs for accurate job costing and easier accounting. This simple routine helps keep your crews paid on time and your records clean.
+
 ## Common questions from owners
 
 **Do I need to withhold taxes for 1099 contractors?**  

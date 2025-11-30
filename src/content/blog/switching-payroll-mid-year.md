@@ -277,11 +277,21 @@ If your crew works in multiple states, confirm your new provider supports all th
 
 Planning with a clear timeline, good communication, and thorough testing will make your mid-year switch smooth and keep your crew paid on time.
 
+## How to switch payroll providers mid-year without disrupting crew pay
+
+Switching payroll providers mid-year can feel risky because you worry about paychecks arriving late or wrong. The best way to avoid disrupting crew pay is to run payroll on your old system while testing the new one in parallel.
+
+This means your crew keeps getting paid on time even if the new system needs adjustments. During this overlap, compare every paycheck detail—gross pay, taxes, deductions, and net pay—between the two systems.
+
+If you spot any differences, fix them with your new provider before the full switch. Once you are confident the new system is accurate, stop running payroll on the old system.
+
+Clear communication with your crew is key. Let them know pay dates won’t change and explain any new pay stub formats or contacts. This keeps everyone calm and focused on the job.
+
 ## Common questions from owners
 
 ### Can I switch payroll providers without disrupting crew pay?
 
-Yes. The best way is to keep running payroll on your old system while you test the new one. Only switch fully when you are sure the new system calculates pay correctly and has all the right data. Clear communication with your crew helps avoid confusion.
+Yes. The safest way is to keep running payroll on your old system while testing the new one. Only switch fully when you are sure the new system calculates pay correctly and has all the right data. Clear communication with your crew helps avoid confusion.
 
 ### What happens to tax filings when I switch payroll providers mid-year?
 
@@ -301,4 +311,4 @@ Avoid turning off your old system before exporting all necessary data. Don’t a
 
 ---
 
-For more details on setting up payroll for your crew, see our [best payroll and time tracking setup for 10 to 50 person construction crews](https://payrollforcrews.com/blog/construction-payroll-setup/).
+For more details on setting up payroll for your crew, see our [best payroll and time tracking setup for 10 to 50 person construction crews](https://payrollforcrews.com/blog/construction-payroll-setup/). If you have both W2 employees and 1099 contractors, check out our guide on [handling payroll for W2 employees and 1099 contractors](https://payrollforcrews.com/blog/w2-and-1099-payroll/).
