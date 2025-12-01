@@ -3,15 +3,18 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-  "dev": "astro dev",
-  "build": "astro build",
-  "preview": "astro preview",
-  "astro": "astro",
-  "seo:expand": "node agent/seo-expand.js",
-  "seo:enrich": "node agent/content-enrich.js",
-  "seo:refresh": "npm run seo:expand && npm run seo:enrich"
-}
-,
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "sync": "astro sync",
+    "seo:expand": "node agent/seo-expand.js",
+    "seo:enrich": "node agent/content-enrich.js",
+    "seo:refresh": "npm run seo:expand && npm run seo:enrich",
+    "agent:seo": "node agent/cron-agent.js",
+    "niche:draft": "node agent/niche-draft.js"
+  },
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",
     "@astrojs/rss": "^4.0.14",

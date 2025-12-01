@@ -225,15 +225,13 @@ It offers:
 
 Other AI accounting tools exist, but many are built for larger businesses or require full migrations from your current software. Adam’s ability to layer on top of what you already use makes it a practical choice for crews who want to improve financial control without a big disruption.
 
-## How does an AI accountant help small crew-based businesses?
+## How AI accounting software fits into your existing tools and workflow
 
-An AI accountant helps small crews by automating the bookkeeping tasks that usually take up valuable time. It sorts transactions, categorizes expenses, and keeps your books up to date without manual data entry.
+Many small crew businesses already use payroll and time tracking tools. AI accounting software like Adam complements these by focusing on bookkeeping and financial reporting without replacing your payroll system.
 
-For example, if your crew buys fuel, materials, or pays subcontractors across several jobs, the AI accountant automatically links those expenses to the right categories and jobs. This means you get faster and more accurate reports on which jobs are profitable and where costs are creeping up.
+For example, if you use a payroll provider to handle wages and taxes, Adam can import that payroll data to show labor costs in your financial reports. This gives you a clearer picture of job profitability without switching payroll systems.
 
-This helps you make smarter decisions about bids, crew assignments, and managing cash flow, all without needing to be an accounting expert.
-
----
+If you are still setting up your payroll and time tracking, start with a solid foundation. Our [guide on getting a stable setup](https://payrollforcrews.com/blog/construction-payroll-setup/) is a good place to begin. Once payroll and time tracking are stable, adding AI bookkeeping can help you see which jobs are truly profitable.
 
 ## Common questions from owners
 
@@ -243,7 +241,7 @@ AI accounting tools like Adam focus on bookkeeping and financial reporting. They
 **Is AI accounting software reliable for small business payroll and finances?**  
 AI accounting software is reliable for categorizing transactions and generating reports, but it depends on regular review. You still need to check that the AI’s work matches your expectations. It reduces manual errors but does not eliminate the need for oversight.
 
-**Is AI accounting software secure for small business financial data?**  
+**Is AI accounting software secure for small businesses?**  
 Reputable AI accounting tools use strong encryption and secure connections to protect your data. Adam by Tyms follows industry-standard security practices. Still, always use strong passwords and enable two-factor authentication where possible.
 
 **Will using Adam replace my accountant or bookkeeper?**  

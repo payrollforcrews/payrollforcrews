@@ -132,7 +132,7 @@ For example, if your crew works in multiple states, your new provider must regis
 
 Keep copies of all tax documents from your old provider. If questions come up from tax agencies, having those records handy will save time and headaches.
 
-## Can you switch payroll providers without disrupting crew pay?
+## Can you switch payroll providers mid-year without disrupting crew pay?
 
 Yes. The key is to keep running payroll on your old system while testing the new one. This way, if the new system has errors or missing data, your crew still gets paid on time.
 
@@ -148,7 +148,7 @@ Next, work closely with your new provider to import this data and run test payro
 
 Also, check that your new provider correctly applies your state’s overtime rules and any special deductions or benefits your crew uses. This is especially important if your crew regularly works overtime or has unique payroll setups.
 
-Keep your old payroll system active until you are confident the new system runs smoothly. This backup prevents missed or double payments, which can cause frustration on the jobsite.
+Keep your old payroll system active until you are confident the new one runs smoothly. This backup prevents missed or double payments, which can cause frustration on the jobsite.
 
 ## Why switching payroll providers mid-year can be a smart move for small crews
 
@@ -243,18 +243,6 @@ Here are some common pitfalls to avoid:
 
 Being aware of these helps you avoid headaches and keep your crew happy.
 
-## How to switch payroll providers mid-year without errors: key steps
-
-Switching payroll providers mid-year without errors is all about preparation and testing. Start by exporting complete year-to-date payroll data from your current provider, including wages, taxes, deductions, and employee info. This ensures your new provider has a full picture.
-
-Next, work closely with your new provider to import this data and run test payrolls. Compare every number—gross pay, taxes, deductions, and net pay—to your old system. Fix any discrepancies before you go live.
-
-Make sure your new provider applies your state’s overtime rules correctly from day one. For example, if your crew regularly works overtime, a missed rule can lower paychecks and cause frustration on site.
-
-Also, confirm that any special deductions or benefits your crew uses are supported in the new system. If your old provider had custom codes, ask your new provider how those will be handled.
-
-Keep your old payroll system active until you are confident the new one works perfectly. This backup prevents missed or double payments, which can disrupt your crew and your jobsite.
-
 ## Why running parallel payrolls matters when switching mid-year
 
 Running payroll on your old system while testing the new one is the safest way to switch providers mid-year. This approach means your crew gets paid on time no matter what.
@@ -287,9 +275,33 @@ If you spot any differences, fix them with your new provider before the full swi
 
 Clear communication with your crew is key. Let them know pay dates won’t change and explain any new pay stub formats or contacts. This keeps everyone calm and focused on the job.
 
+## How to switch payroll providers mid-year without errors: key steps
+
+Switching payroll providers mid-year without errors is all about preparation and testing. Start by exporting complete year-to-date payroll data from your current provider, including wages, taxes, deductions, and employee info. This ensures your new provider has a full picture.
+
+Next, work closely with your new provider to import this data and run test payrolls. Compare every number—gross pay, taxes, deductions, and net pay—to your old system. Fix any discrepancies before you go live.
+
+Make sure your new provider applies your state’s overtime rules correctly from day one. For example, if your crew regularly works overtime, a missed rule can lower paychecks and cause frustration on site.
+
+Also, confirm that any special deductions or benefits your crew uses are supported in the new system. If your old provider had custom codes, ask your new provider how those will be handled.
+
+Keep your old payroll system active until you are confident the new one works perfectly. This backup prevents missed or double payments, which can disrupt your crew and your jobsite.
+
+## How to switch payroll providers mid-year: avoiding common mistakes
+
+When changing payroll providers mid-year, the biggest risks come from rushing and missing details. To avoid mistakes:
+
+- Don’t turn off your old system before exporting all necessary data.
+- Verify that your new provider applies your state’s overtime and tax rules correctly.
+- Confirm all custom deductions and benefits codes are supported or mapped.
+- Run multiple test payrolls and compare results carefully.
+- Communicate clearly with your crew about what to expect.
+
+Taking these steps helps prevent payroll errors that can frustrate your crew and cause compliance headaches.
+
 ## Common questions from owners
 
-### Can I switch payroll providers without disrupting crew pay?
+### Can I switch payroll providers mid-year without disrupting crew pay?
 
 Yes. The safest way is to keep running payroll on your old system while testing the new one. Only switch fully when you are sure the new system calculates pay correctly and has all the right data. Clear communication with your crew helps avoid confusion.
 
