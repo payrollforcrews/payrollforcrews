@@ -115,6 +115,40 @@ async function fetchGoogleResults(query, cx, num = 5) {
   }
 }
 
+/**
+ * Fetch autocomplete suggestions (PASF-style phrases) from Google Suggest.
+ * Uses the "firefox" client format:
+ * Response is: [ originalQuery, [ suggestion1, suggestion2, ... ], ... ]
+ */
+async function fetchAutocompleteSuggestions(query) {
+  const url = 'https://suggestqueries.google.com/complete/search';
+
+  try {
+    const res = await axios.get(url, {
+      params: {
+        client: 'firefox',
+        q: query
+      },
+      timeout: 10000
+    });
+
+    const data = res.data;
+    if (!Array.isArray(data) || !Array.isArray(data[1])) {
+      return [];
+    }
+
+    const suggestions = data[1]
+      .filter((s) => typeof s === 'string')
+      .map((s) => s.trim())
+      .filter((s) => s.length > 0);
+
+    return suggestions;
+  } catch (err) {
+    console.error(`Google Suggest failed for "${query}":`, err.message);
+    return [];
+  }
+}
+
 async function main() {
   const site = readJson('site.json');
   const contentPlan = readJson('content-plan.json');
@@ -128,12 +162,31 @@ async function main() {
     process.exit(1);
   }
 
+  // Existing keyword map (OpenAI-generated queries)
   let keywordMap = [];
   const keywordMapPath = path.join(configDir, 'keyword-map.json');
   if (fs.existsSync(keywordMapPath)) {
     const raw = fs.readFileSync(keywordMapPath, 'utf8').trim();
     if (raw) {
       keywordMap = JSON.parse(raw);
+    }
+  }
+
+  // PASF map (slug -> array of phrases)
+  let pasfMap = {};
+  const pasfMapPath = path.join(configDir, 'pasf-map.json');
+  if (fs.existsSync(pasfMapPath)) {
+    const rawPasf = fs.readFileSync(pasfMapPath, 'utf8').trim();
+    if (rawPasf) {
+      try {
+        pasfMap = JSON.parse(rawPasf);
+      } catch (err) {
+        console.error(
+          'Failed to parse existing pasf-map.json. Starting fresh:',
+          err.message
+        );
+        pasfMap = {};
+      }
     }
   }
 
@@ -262,11 +315,69 @@ Output JSON only in this exact shape:
     }
 
     console.log(`Added ${added} new queries for ${slug}.`);
+
+    // === PASF (autocomplete) suggestions ===
+    console.log(`Fetching PASF (autocomplete) suggestions for: "${primaryKeyword}"`);
+    const rawSuggestions = await fetchAutocompleteSuggestions(primaryKeyword);
+
+    // Niche-aware filter: keep suggestions with at least 2 words AND containing
+    // at least one relevant token for this site.
+    const allowedTokens = [
+      'payroll',
+      'time tracking',
+      'timesheet',
+      '1099',
+      'w2',
+      'contractor',
+      'construction',
+      'crew',
+      'crews',
+      'job costing',
+      'accounting',
+      'accountant',
+      'ai accounting'
+    ];
+
+    const filtered = rawSuggestions.filter((s) => {
+      const wordCount = s.split(/\s+/).length;
+      if (wordCount < 2) return false;
+
+      const lower = s.toLowerCase();
+      return allowedTokens.some((token) => lower.includes(token));
+    });
+
+    console.log(
+      `Got ${filtered.length} PASF candidate phrases from Google Suggest for slug "${slug}".`
+    );
+
+    const existingForSlug = Array.isArray(pasfMap[slug]) ? pasfMap[slug] : [];
+    const lowerExisting = new Set(
+      existingForSlug.map((s) => (typeof s === 'string' ? s.toLowerCase() : ''))
+    );
+
+    const mergedForSlug = [...existingForSlug];
+    for (const phrase of filtered) {
+      const lower = phrase.toLowerCase();
+      if (!lowerExisting.has(lower)) {
+        lowerExisting.add(lower);
+        mergedForSlug.push(phrase);
+      }
+    }
+
+    pasfMap[slug] = mergedForSlug;
+    console.log(
+      `PASF map for "${slug}" now has ${mergedForSlug.length} total phrases.`
+    );
   }
 
   writeJson('keyword-map.json', keywordMap);
+  writeJson('pasf-map.json', pasfMap);
+
   console.log(
     `\nDone. keyword-map.json now has ${keywordMap.length} total entries.`
+  );
+  console.log(
+    `Done. pasf-map.json now has PASF entries for ${Object.keys(pasfMap).length} slugs.`
   );
 }
 

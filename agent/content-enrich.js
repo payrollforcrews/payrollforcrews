@@ -28,6 +28,11 @@ function readJson(relativePath) {
   return JSON.parse(raw);
 }
 
+function writeJson(relativePath, data) {
+  const fullPath = path.join(configDir, relativePath);
+  fs.writeFileSync(fullPath, JSON.stringify(data, null, 2), 'utf8');
+}
+
 function stripFences(text) {
   let cleaned = text.trim();
   if (cleaned.startsWith('```')) {
@@ -133,6 +138,22 @@ async function main() {
   const contentPlan = readJson('content-plan.json');
   const keywordMap = readJson('keyword-map.json');
 
+  // PASF phrases harvested by seo-expand, keyed by slug
+  let pasfMap = {};
+  try {
+    pasfMap = readJson('pasf-map.json');
+  } catch (err) {
+    pasfMap = {};
+  }
+
+  // Enrichment log to avoid re-touching articles when nothing new is available
+  let enrichLog = {};
+  try {
+    enrichLog = readJson('enrich-log.json');
+  } catch (err) {
+    enrichLog = {};
+  }
+
   const itemsToEnrich = contentPlan.items.filter(
     (item) => item.status === 'published' && item.action === 'enrich'
   );
@@ -154,7 +175,7 @@ async function main() {
   );
 
   for (const item of itemsToEnrich) {
-    const { slug, title, primaryKeyword, pillarId } = item;
+    const { slug, title } = item;
     const mdPath = path.join(blogDir, `${slug}.md`);
 
     if (!fs.existsSync(mdPath)) {
@@ -164,13 +185,44 @@ async function main() {
       continue;
     }
 
-    const suggestions = selectSuggestionsForSlug(keywordMap, slug);
-    if (!suggestions.length) {
+    const allSuggestions = selectSuggestionsForSlug(keywordMap, slug);
+    if (!allSuggestions.length) {
       console.log(
         `No keyword suggestions found for ${slug}, skipping enrichment.`
       );
       continue;
     }
+
+    const logEntry = enrichLog[slug] || { usedQueries: [] };
+    const usedSet = new Set(
+      (logEntry.usedQueries || [])
+        .filter((q) => typeof q === 'string')
+        .map((q) => q.toLowerCase().trim())
+    );
+
+    // Only treat *new* and *high-priority* suggestions as triggers to touch the article
+    const newHighValueSuggestions = allSuggestions.filter((s) => {
+      const q = (s.query || '').trim();
+      if (!q) return false;
+
+      const lower = q.toLowerCase();
+      if (usedSet.has(lower)) return false;
+
+      const priority = s.priority ?? 2;
+      // Only treat priority 1 or 2 as "worth touching the article"
+      if (priority > 2) return false;
+
+      return true;
+    });
+
+    if (!newHighValueSuggestions.length) {
+      console.log(
+        `No NEW high-priority suggestions for ${slug}, leaving article unchanged.`
+      );
+      continue;
+    }
+
+    const pasfPhrases = Array.isArray(pasfMap[slug]) ? pasfMap[slug] : [];
 
     const articleContent = fs.readFileSync(mdPath, 'utf8');
     const { frontmatter, body } = splitFrontmatter(articleContent);
@@ -215,7 +267,30 @@ ${body}
 
 You also have a set of search queries and suggestions to enrich this article:
 
-${JSON.stringify(suggestions, null, 2)}
+All suggestions (for context):
+${JSON.stringify(allSuggestions, null, 2)}
+
+New high-priority suggestions that justify updating this article RIGHT NOW:
+${JSON.stringify(newHighValueSuggestions, null, 2)}
+
+In addition, you may optionally use the following PASF-style search phrases (People Also Search For style) as light seasoning. 
+Treat these as hints, not the main topic, and only use them if they fit naturally in the updated body:
+
+${
+  pasfPhrases.length
+    ? pasfPhrases.map((p) => `- ${p}`).join('\n')
+    : '- (No PASF phrases available for this article)'
+}
+
+Rules for PASF usage:
+- Use at most 3 to 5 PASF phrases in the entire updated body.
+- Do not repeat the same PASF phrase more than once.
+- Only use PASF phrases in:
+  - Section headings (H2 or H3),
+  - FAQ questions,
+  - Internal link anchor text,
+  - Short clarifying sentences where it reads naturally.
+- Never force a PASF phrase if it sounds unnatural or spammy for small crew owners.
 
 Each suggestion has:
 - "query": what a crew owner might type into Google
@@ -225,16 +300,19 @@ Each suggestion has:
 
 Your job:
 
-1. Add 1–3 new H2 or H3 sections that naturally answer the highest-priority suggestions where sectionType is "new-section".
+1. Focus primarily on the "newHighValueSuggestions". 
+   - Add 1 to 3 new H2 or H3 sections that naturally answer the highest-priority new suggestions where sectionType is "new-section".
    - Use headings that feel like real questions or clear statements (not spammy keyword strings).
-   - Weave in the queries in natural language, do not keyword stuff.
+   - You can weave in PASF phrases in headings when it sounds natural and helpful.
+   - Avoid dramatically rewriting parts of the article that already answer older suggestions unless needed for clarity.
 
-2. Add a short FAQ section near the end of the BODY.
+2. Add or update a short FAQ section near the end of the BODY.
    - Use a heading like "Common questions from owners" or similar.
-   - Include 3–5 Q&A pairs based on suggestions where sectionType is "faq-item".
+   - Include 3 to 5 Q and A pairs based primarily on new or under-served "faq-item" suggestions.
    - Each question can echo how an owner would actually ask it.
+   - You may lightly incorporate PASF phrases into FAQ questions if it still sounds like a real person.
 
-3. Add 1–2 internal links to relevant existing articles, only where it reads naturally.
+3. Add 1 or 2 internal links to relevant existing articles, only where it reads naturally.
    You can use any of these as targets:
 ${otherArticles}
 
@@ -243,6 +321,9 @@ For internal links:
 - Link to the correct URL for the slug, for example: https://${site.domain ||
       'payrollforcrews.com'}/blog/construction-payroll-setup/
 
+4. When you choose headings, FAQ questions, or anchor text, treat PASF phrases as seasoning.
+   - It is better to skip a PASF phrase than to make the sentence feel awkward.
+
 Important output rules:
 - Return ONLY the UPDATED BODY markdown (no frontmatter).
 - Do NOT wrap the result in backticks or code fences.
@@ -250,7 +331,9 @@ Important output rules:
 - Do NOT escape characters unnecessarily (no leading backslashes before # or -).
 `;
 
-    console.log(`\nEnriching article: ${slug} (${title})`);
+    console.log(
+      `\nEnriching article: ${slug} (${title}) using ${newHighValueSuggestions.length} new high-priority suggestions.`
+    );
 
     let updatedBody;
     try {
@@ -279,7 +362,27 @@ Important output rules:
     const newContent = `${frontmatter}\n${updatedBody.trimStart()}`;
     fs.writeFileSync(mdPath, newContent, 'utf8');
     console.log(`Updated: ${slug} (backup written to ${mdPath}.bak)`);
+
+    // Update enrich log with the queries we just used
+    const newlyUsedQueries = newHighValueSuggestions
+      .map((s) => (s.query || '').trim())
+      .filter((q) => q.length > 0);
+
+    const mergedUsed = Array.from(
+      new Set([
+        ...(logEntry.usedQueries || []),
+        ...newlyUsedQueries
+      ])
+    );
+
+    enrichLog[slug] = {
+      usedQueries: mergedUsed,
+      lastUpdated: new Date().toISOString()
+    };
   }
+
+  // Persist enrichment log so future runs can decide whether to touch an article
+  writeJson('enrich-log.json', enrichLog);
 
   console.log('\nContent enrichment complete.');
 }
