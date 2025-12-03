@@ -32,14 +32,16 @@
     "category": "global_payroll",
     "who_it_helps": "US and EU companies hiring contractors or employees in multiple countries and currencies.",
     "landing_url": "https://www.lano.io/",
-    "affiliate_url": null,
+    "affiliate_url": "https://www.lano.io/affiliate-collaborations/lano-and-payroll-for-crews?utm_source=PayrollForCrews_001QF00001YFXnZYAX&utm_medium=affiliate&utm_campaign=partnerstack_251201",
     "status": "active"
   },
   {
-     "id": "tyms",
-     "name": "Tyms / Adam (AI Accountant)",
-     "role": "AI-powered accounting and bookkeeping assistant for small businesses and crews",
-     "website": "https://www.useadam.io/",
-     "affiliateUrl": "https://app.useadam.io/auth/register?linkId=lp_914554&sourceId=payrollforcrews&tenantId=tyms"
-   }
+    "id": "tyms",
+    "name": "Tyms / Adam (AI Accountant)",
+    "category": "ai_accounting",
+    "who_it_helps": "Small businesses and crew-based companies that want AI to handle bookkeeping, categorization and basic reporting without hiring a full-time accountant.",
+    "landing_url": "https://www.useadam.io/",
+    "affiliate_url": "https://app.useadam.io/auth/register?linkId=lp_914554&sourceId=payrollforcrews&tenantId=tyms",
+    "status": "active"
+  }
 ]
