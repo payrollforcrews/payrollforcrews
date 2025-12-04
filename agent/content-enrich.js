@@ -138,6 +138,20 @@ async function main() {
   const contentPlan = readJson('content-plan.json');
   const keywordMap = readJson('keyword-map.json');
 
+  // Products for optional inline mentions
+  let productsList = [];
+  try {
+    productsList = readJson('products.json');
+  } catch (err) {
+    productsList = [];
+  }
+
+  const productsById = {};
+  for (const p of productsList) {
+    if (!p || !p.id) continue;
+    productsById[p.id] = p;
+  }
+
   // PASF phrases harvested by seo-expand, keyed by slug
   let pasfMap = {};
   try {
@@ -200,7 +214,7 @@ async function main() {
         .map((q) => q.toLowerCase().trim())
     );
 
-    // Only treat *new* and *high-priority* suggestions as triggers to touch the article
+    // Only treat new and high-priority suggestions as triggers to touch the article
     const newHighValueSuggestions = allSuggestions.filter((s) => {
       const q = (s.query || '').trim();
       if (!q) return false;
@@ -223,6 +237,46 @@ async function main() {
     }
 
     const pasfPhrases = Array.isArray(pasfMap[slug]) ? pasfMap[slug] : [];
+
+    // Optional inline product mentions for this article
+    let ctaProducts = [];
+    if (Array.isArray(item.mainProducts) && item.mainProducts.length) {
+      ctaProducts = item.mainProducts
+        .map((id) => productsById[id])
+        .filter(
+          (p) =>
+            p &&
+            p.status === 'active' &&
+            typeof p.id === 'string' &&
+            (p.inline_note || p.who_it_helps)
+        );
+    }
+
+    let ctaToolsText = '';
+    if (ctaProducts.length) {
+      const lines = ctaProducts.map((p) => {
+        const name = p.name || p.id;
+        const inlineNote = p.inline_note || p.who_it_helps || '';
+        return `- ${name}: ${inlineNote}`;
+      });
+
+      ctaToolsText = `
+For this article, you MAY optionally mention one of these tools inline if it genuinely helps the reader:
+
+${lines.join('\n')}
+
+Inline mention rules:
+- At most one tool mention in the entire article.
+- It must be inside a normal paragraph, not its own section, list, or heading.
+- Do not frame it as a "recommended tools" list.
+- Use natural anchor text and link to /go/<productId>.
+- If there is no natural spot where mentioning a tool feels helpful, do not mention any tool at all.
+`;
+    } else {
+      ctaToolsText = `
+For this article, you should not mention any specific tools by name unless the existing body already does so in a natural way.
+`;
+    }
 
     const articleContent = fs.readFileSync(mdPath, 'utf8');
     const { frontmatter, body } = splitFrontmatter(articleContent);
@@ -292,6 +346,8 @@ Rules for PASF usage:
   - Short clarifying sentences where it reads naturally.
 - Never force a PASF phrase if it sounds unnatural or spammy for small crew owners.
 
+${ctaToolsText}
+
 Each suggestion has:
 - "query": what a crew owner might type into Google
 - "type": "pillar" | "support" | "faq"
@@ -310,7 +366,6 @@ Your job:
    - Use a heading like "Common questions from owners" or similar.
    - Include 3 to 5 Q and A pairs based primarily on new or under-served "faq-item" suggestions.
    - Each question can echo how an owner would actually ask it.
-   - You may lightly incorporate PASF phrases into FAQ questions if it still sounds like a real person.
 
 3. Add 1 or 2 internal links to relevant existing articles, only where it reads naturally.
    You can use any of these as targets:

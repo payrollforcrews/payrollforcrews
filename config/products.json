@@ -33,7 +33,8 @@
     "who_it_helps": "US and EU companies hiring contractors or employees in multiple countries and currencies.",
     "landing_url": "https://www.lano.io/",
     "affiliate_url": "https://www.lano.io/affiliate-collaborations/lano-and-payroll-for-crews?utm_source=PayrollForCrews_001QF00001YFXnZYAX&utm_medium=affiliate&utm_campaign=partnerstack_251201",
-    "status": "active"
+    "status": "active",
+    "inline_note": "When you start paying crews or contractors in more than one country, this is usually where I tell people to look at a global payroll platform like Lano so they do not have to figure out each country's tax rules themselves."
   },
   {
     "id": "tyms",
@@ -42,6 +43,7 @@
     "who_it_helps": "Small businesses and crew-based companies that want AI to handle bookkeeping, categorization and basic reporting without hiring a full-time accountant.",
     "landing_url": "https://www.useadam.io/",
     "affiliate_url": "https://app.useadam.io/auth/register?linkId=lp_914554&sourceId=payrollforcrews&tenantId=tyms",
-    "status": "active"
+    "status": "active",
+    "inline_note": "If you are drowning in receipts and basic bookkeeping, this is usually where I suggest trying an AI accountant like Adam from Tyms so you can stay on top of the numbers without hiring a full time bookkeeper."
   }
 ]
