@@ -2,7 +2,6 @@
 title: "Should You Use an AI Accountant for Your Crew? Adam by Tyms for Small Businesses"
 description: "Plain-English look at Adam by Tyms for small crew-based businesses: what it does, where it fits in your stack, and how to test it without blowing up your books."
 pubDate: "Nov 27 2025"
-heroImage: "../../assets/blog-placeholder-2.jpg"
 ---
 If you run a small crew-based business, your week usually looks like this:
 

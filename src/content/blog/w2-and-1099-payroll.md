@@ -2,7 +2,6 @@
 title: 'How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors'
 description: 'A practical way to pay employees and subcontractors from one rhythm without mixing them up or breaking the rules.'
 pubDate: 'Nov 27 2025'
-heroImage: '../../assets/blog-placeholder-1.jpg'
 ---
 A lot of small construction, trades, and field-service companies grow up with a mix of people:
 

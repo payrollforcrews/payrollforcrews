@@ -2,7 +2,6 @@
 title: 'Simple Time Tracking Rules for Foremen So Payroll Stops Being a Mess'
 description: 'A short set of rules you can hand to foremen so hours from the field come in clean every pay period.'
 pubDate: 'Nov 27 2025'
-heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
 
 Most payroll headaches start in the field, not in the office.
