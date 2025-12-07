@@ -1,7 +1,13 @@
 ---
-title: 'How to Switch Payroll Providers Mid-Year Without Losing Your Mind'
-description: 'A simple, low-drama way to switch payroll systems in the middle of the year without wrecking paychecks or tax records.'
-pubDate: 'Nov 27 2025'
+title: How to Switch Payroll Providers Mid-Year Without Losing Your Mind
+description: >-
+  A simple, low-drama way to switch payroll systems in the middle of the year
+  without wrecking paychecks or tax records.
+pubDate: Nov 27 2025
+heroImage: ../../assets/blog/switching-payroll-mid-year-hero.webp
+heroAlt: >-
+  Crew owner and workers outside a jobsite trailer leaning over a rough table
+  full of paperwork, planning a change in how they run payroll.
 ---
 Most owners switch payroll systems only when they are already frustrated.
 

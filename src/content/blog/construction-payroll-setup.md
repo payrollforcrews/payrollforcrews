@@ -1,7 +1,13 @@
 ---
-title: 'Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews'
-description: 'A simple stack for owners who run crews, not cubicles. Time tracking, payroll, and accounting that actually fit job sites.'
-pubDate: 'Nov 27 2025'
+title: Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews
+description: >-
+  A simple stack for owners who run crews, not cubicles. Time tracking, payroll,
+  and accounting that actually fit job sites.
+pubDate: Nov 27 2025
+heroImage: ../../assets/blog/construction-payroll-setup-hero.webp
+heroAlt: >-
+  Foreman in worn work clothes talking through time tracking rules with a small,
+  tired crew on a messy jobsite.
 ---
 Running payroll for a construction crew is not the same as paying five office staff on salary.
 
