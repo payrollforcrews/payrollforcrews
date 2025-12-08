@@ -9,8 +9,8 @@ description: >-
 pubDate: Nov 27 2025
 heroImage: ../../assets/blog/ai-accountant-for-crews-adam-by-tyms-hero.webp
 heroAlt: >-
-  Crew owner in dusty work clothes at a cramped shop office desk piled with
-  receipts and a plain laptop, thinking through the numbers.
+  Should You Use an AI Accountant for Your Crew? Adam by Tyms for Small
+  Businesses.
 ---
 If you run a small crew-based business, your week usually looks like this:
 

@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
@@ -8,7 +7,43 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  heroAlt,
+} = Astro.props as Props;
+
+// Default alt is the title. heroAlt is an optional manual override if you ever want it.
+const titleAltBase =
+  typeof title === 'string' && title.trim().length > 0
+    ? title.trim()
+    : 'Hero image for this article';
+
+const computedHeroAlt =
+  typeof heroAlt === 'string' && heroAlt.trim().length > 0
+    ? heroAlt.trim()
+    : titleAltBase;
+
+// Normalize heroImage (string path or Astro image metadata) to heroSrc
+let heroSrc: string | null = null;
+let heroWidth: number | undefined;
+let heroHeight: number | undefined;
+
+if (heroImage) {
+  if (typeof heroImage === 'string') {
+    heroSrc = heroImage;
+  } else if (typeof heroImage === 'object' && 'src' in heroImage) {
+    heroSrc = heroImage.src as string;
+
+    if ('width' in heroImage && 'height' in heroImage) {
+      heroWidth = heroImage.width as number;
+      heroHeight = heroImage.height as number;
+    }
+  }
+}
 ---
 
 <html lang="en">
@@ -93,7 +128,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <main>
       <article>
         <div class="hero-image">
-          {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+          {heroSrc && (
+            <img
+              src={heroSrc}
+              alt={computedHeroAlt}
+              loading="lazy"
+              decoding="async"
+              width={heroWidth}
+              height={heroHeight}
+            />
+          )}
         </div>
         <div class="prose">
           <div class="title">

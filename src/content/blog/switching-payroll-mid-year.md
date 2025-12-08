@@ -5,9 +5,7 @@ description: >-
   without wrecking paychecks or tax records.
 pubDate: Nov 27 2025
 heroImage: ../../assets/blog/switching-payroll-mid-year-hero.webp
-heroAlt: >-
-  Crew owner and workers outside a jobsite trailer leaning over a rough table
-  full of paperwork, planning a change in how they run payroll.
+heroAlt: How to Switch Payroll Providers Mid-Year Without Losing Your Mind.
 ---
 Most owners switch payroll systems only when they are already frustrated.
 

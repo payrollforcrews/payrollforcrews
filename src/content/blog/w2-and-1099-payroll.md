@@ -5,9 +5,7 @@ description: >-
   mixing them up or breaking the rules.
 pubDate: Nov 27 2025
 heroImage: ../../assets/blog/w2-and-1099-payroll-hero.webp
-heroAlt: >-
-  Employees and subcontractors in different work clothes gathered at a rough
-  jobsite table, sorting out work and pay together.
+heroAlt: How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors.
 ---
 A lot of small construction, trades, and field-service companies grow up with a mix of people:
 
