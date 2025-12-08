@@ -9,7 +9,13 @@
       "title": "Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews",
       "primaryKeyword": "construction payroll for small crews",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam", "webhr", "lano", "tyms"]
+      "mainProducts": [
+        "timecamp",
+        "connecteam",
+        "webhr",
+        "lano",
+        "tyms"
+      ]
     },
     {
       "slug": "switching-payroll-mid-year",
@@ -18,7 +24,10 @@
       "title": "How to Switch Payroll Providers Mid-Year Without Losing Your Mind",
       "primaryKeyword": "switch payroll providers mid year",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano"]
+      "mainProducts": [
+        "webhr",
+        "lano"
+      ]
     },
     {
       "slug": "w2-and-1099-payroll",
@@ -27,7 +36,13 @@
       "title": "How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors",
       "primaryKeyword": "w2 and 1099 workers payroll",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano", "timecamp", "connecteam", "tyms"]
+      "mainProducts": [
+        "webhr",
+        "lano",
+        "timecamp",
+        "connecteam",
+        "tyms"
+      ]
     },
     {
       "slug": "time-tracking-rules-for-foremen",
@@ -35,55 +50,164 @@
       "title": "Simple Time Tracking Rules for Foremen So Payroll Stops Being a Mess",
       "primaryKeyword": "time tracking rules for construction foremen",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam"]
+      "mainProducts": [
+        "timecamp",
+        "connecteam"
+      ]
     },
     {
       "slug": "multi-state-construction-payroll",
-      "status": "planned",
+      "status": "published",
       "title": "Running Construction Payroll Across Multiple States Without Getting Burned",
       "primaryKeyword": "multi state construction payroll",
       "intent": "how_to",
-      "mainProducts": ["webhr", "lano"]
+      "mainProducts": [
+        "webhr",
+        "lano"
+      ],
+      "action": "enrich",
+      "source": "agent:content-draft",
+      "firstDraftedAt": "2025-12-08T08:48:11.697Z",
+      "usedQueries": [
+        "how to manage multi state construction payroll for small crews",
+        "multi state payroll tax withholding rules for construction workers",
+        "how to calculate overtime for multi state construction payroll",
+        "do I need separate payroll accounts for each state my crew works in",
+        "can I use one payroll provider for multi state construction payroll",
+        "can I use one payroll platform for multi state construction payroll",
+        "do I need to register my construction business in every state I work in"
+      ],
+      "lastEnrichedAt": "2025-12-08T09:02:26.475Z"
     },
     {
       "slug": "job-costing-labor-small-crews",
-      "status": "planned",
+      "status": "published",
       "title": "How to See Your Labor Cost by Job When You Only Have a Small Crew",
       "primaryKeyword": "job costing labor small construction company",
       "intent": "how_to",
-      "mainProducts": ["tyms", "timecamp", "connecteam"]
+      "mainProducts": [
+        "tyms",
+        "timecamp",
+        "connecteam"
+      ],
+      "action": "enrich",
+      "source": "agent:content-draft",
+      "firstDraftedAt": "2025-12-08T08:48:11.697Z",
+      "usedQueries": [
+        "how to accurately allocate labor costs across multiple jobs for small construction crews",
+        "how to track employee time for job costing on small crews",
+        "how to calculate labor cost per job with limited payroll data",
+        "what percentage of total job cost is typically labor for small crews",
+        "what is job costing labor in a small construction company",
+        "can QuickBooks track labor costs by job for small construction companies"
+      ],
+      "lastEnrichedAt": "2025-12-08T09:03:04.907Z"
     },
     {
       "slug": "switching-from-paper-timesheets",
-      "status": "planned",
+      "status": "published",
       "title": "Getting Off Paper Timesheets: A 30 Day Plan for Small Construction Crews",
       "primaryKeyword": "switch from paper timesheets construction",
       "intent": "how_to",
-      "mainProducts": ["timecamp", "connecteam"]
+      "mainProducts": [
+        "timecamp",
+        "connecteam"
+      ],
+      "action": "enrich",
+      "source": "agent:content-draft",
+      "firstDraftedAt": "2025-12-08T08:48:11.697Z",
+      "usedQueries": [
+        "how to switch from paper timesheets to digital for construction crews",
+        "benefits of switching from paper timesheets in construction",
+        "best construction timesheet software for small crews",
+        "can I use mobile apps to replace paper timesheets on jobsites?",
+        "how long does it take to fully switch from paper timesheets?",
+        "are digital timesheets accurate for construction payroll?",
+        "can digital timesheets integrate with payroll software?",
+        "what equipment is needed to switch from paper timesheets?"
+      ],
+      "lastEnrichedAt": "2025-12-08T09:03:56.643Z"
     },
     {
       "slug": "certified-payroll-basics",
-      "status": "planned",
+      "status": "published",
       "title": "Certified Payroll Basics for Small Contractors Who Just Won a Public Job",
       "primaryKeyword": "certified payroll for small contractors",
       "intent": "explainer",
-      "mainProducts": ["webhr", "lano"]
+      "mainProducts": [
+        "webhr",
+        "lano"
+      ],
+      "action": "enrich",
+      "source": "agent:content-draft",
+      "firstDraftedAt": "2025-12-08T08:48:11.697Z",
+      "usedQueries": [
+        "how to complete certified payroll for small contractors",
+        "what is certified payroll and why is it required for public jobs",
+        "steps to submit certified payroll reports for small contractors",
+        "who needs to submit certified payroll reports on public projects",
+        "what information is required on certified payroll reports",
+        "how often do certified payroll reports need to be submitted",
+        "what are prevailing wages and how do they affect certified payroll",
+        "how to complete certified payroll reports for small contractors",
+        "who needs to submit certified payroll reports",
+        "what forms are required for certified payroll reporting"
+      ],
+      "lastEnrichedAt": "2025-12-08T09:04:33.464Z"
     },
     {
       "slug": "overtime-mistakes-small-crews",
-      "status": "planned",
+      "status": "published",
       "title": "The Most Common Overtime Mistakes Small Crew-Based Businesses Make",
       "primaryKeyword": "overtime rules small construction company",
       "intent": "problem",
-      "mainProducts": ["webhr", "timecamp", "connecteam"]
+      "mainProducts": [
+        "webhr",
+        "timecamp",
+        "connecteam"
+      ],
+      "action": "enrich",
+      "source": "agent:content-draft",
+      "firstDraftedAt": "2025-12-08T08:48:11.697Z",
+      "usedQueries": [
+        "overtime rules small construction company",
+        "common overtime mistakes in small construction businesses",
+        "overtime pay requirements for small business owners in construction",
+        "what counts as overtime hours under FLSA for small crews",
+        "can small construction companies classify workers as independent contractors",
+        "what are the penalties for overtime violations in small construction companies",
+        "what counts as overtime hours for small crew workers",
+        "can small construction companies pay overtime hourly or salaried"
+      ],
+      "lastEnrichedAt": "2025-12-08T09:05:31.721Z"
     },
     {
       "slug": "payroll-checklist-pay-period",
-      "status": "planned",
+      "status": "published",
       "title": "Payroll Checklist for Every Pay Period When You Run Field Crews",
       "primaryKeyword": "payroll checklist construction crew",
       "intent": "checklist",
-      "mainProducts": ["timecamp", "connecteam", "webhr", "tyms"]
+      "mainProducts": [
+        "timecamp",
+        "connecteam",
+        "webhr",
+        "tyms"
+      ],
+      "action": "enrich",
+      "source": "agent:content-draft",
+      "firstDraftedAt": "2025-12-08T08:48:11.697Z",
+      "usedQueries": [
+        "payroll checklist construction crew",
+        "how to create a certified payroll checklist for construction crews",
+        "how to track hours and job costs for field crews",
+        "what are the prevailing wage requirements for construction payroll",
+        "what is included in a construction payroll checklist",
+        "how to handle overtime pay for construction workers",
+        "construction payroll compliance checklist",
+        "do construction workers qualify for overtime pay",
+        "why is certified payroll important for construction jobs"
+      ],
+      "lastEnrichedAt": "2025-12-08T09:06:18.126Z"
     },
     {
       "slug": "ai-accountant-for-crews-adam-by-tyms",
@@ -92,7 +216,9 @@
       "title": "Should You Use an AI Accountant for Your Crew? Adam by Tyms for Small Businesses",
       "primaryKeyword": "ai accountant small business",
       "intent": "explainer",
-      "mainProducts": ["tyms"]
+      "mainProducts": [
+        "tyms"
+      ]
     }
   ]
 }
