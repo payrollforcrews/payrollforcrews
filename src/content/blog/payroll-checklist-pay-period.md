@@ -4,7 +4,6 @@ description: 'A practical payroll checklist for construction crew owners to stre
 pubDate: 'Dec 8 2025'
 heroImage: '../../assets/blog/payroll-checklist-pay-period-hero.webp'
 ---
-# Payroll Checklist for Every Pay Period When You Run Field Crews
 
 If your payroll process feels like chaos every pay period, you’re not alone. Maybe your foremen forget to note drive time, hours get scribbled on scraps of paper, or you scramble to track down missing time sheets before payday. This checklist breaks down what you need to do every pay period to keep payroll smooth, accurate, and less stressful.
 

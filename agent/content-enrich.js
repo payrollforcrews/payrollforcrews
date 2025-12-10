@@ -92,6 +92,7 @@ async function callOpenAIForBody(prompt) {
             'Do not bloat the article, aim for a modest bump in depth, not a huge wall of new text. ' +
             'Do not use em dashes. Use commas, parentheses, or periods instead. ' +
             'Do not wrap the result in code fences. Do not include YAML frontmatter. ' +
+	    'Never include any level-1 markdown headings that start with "# ". The page title is handled by the layout. Use "##" and "###" for section headings instead.' +
             'Do not escape characters with unnecessary backslashes.'
         },
         {

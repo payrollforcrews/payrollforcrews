@@ -4,7 +4,6 @@ description: 'How small contractors can handle certified payroll on their first 
 pubDate: 'Dec 8 2025'
 heroImage: '../../assets/blog/certified-payroll-basics-hero.webp'
 ---
-# Certified Payroll Basics for Small Contractors Who Just Won a Public Job
 
 You just landed your first public contract. Congrats. Now comes the headache: certified payroll. If your crew’s hours are still scribbled on a whiteboard or your foreman forgets to track drive time, you’re in for a mess. Certified payroll isn’t just about paying your crew; it’s about proving you paid the right wages, on time, with all the correct records. Skip the chaos and get a system that works from day one.
 
