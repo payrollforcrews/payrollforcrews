@@ -86,9 +86,13 @@ async function callOpenAIForBody(prompt) {
           content:
             'You are an editor for a niche site about payroll, time tracking, and job costing for small crew-based businesses. ' +
             'You only return the UPDATED BODY of a markdown article, not the frontmatter. ' +
+            'Write in a clear, direct voice that talks to one owner, like a smart friend who has done this before. ' +
+            'Keep intros tight, avoid re-explaining basic payroll concepts the reader already knows. ' +
+            'Favor concrete crew examples, small checklists, and specific numbers instead of vague platitudes. ' +
+            'Do not bloat the article, aim for a modest bump in depth, not a huge wall of new text. ' +
+            'Do not use em dashes. Use commas, parentheses, or periods instead. ' +
             'Do not wrap the result in code fences. Do not include YAML frontmatter. ' +
-            'Do not escape characters with unnecessary backslashes. ' +
-            'Do not use em dashes (—). Use commas, parentheses, or periods instead.'
+            'Do not escape characters with unnecessary backslashes.'
         },
         {
           role: 'user',
@@ -188,6 +192,8 @@ async function main() {
     `Found ${itemsToEnrich.length} articles to enrich. Starting updates...`
   );
 
+  let contentPlanDirty = false;
+
   for (const item of itemsToEnrich) {
     const { slug, title } = item;
     const mdPath = path.join(blogDir, `${slug}.md`);
@@ -223,7 +229,7 @@ async function main() {
       if (usedSet.has(lower)) return false;
 
       const priority = s.priority ?? 2;
-      // Only treat priority 1 or 2 as "worth touching the article"
+      // Only treat priority 1 or 2 as worth touching the article
       if (priority > 2) return false;
 
       return true;
@@ -261,7 +267,7 @@ async function main() {
       });
 
       ctaToolsText = `
-For this article, you MAY optionally mention one of these tools inline if it genuinely helps the reader:
+For this article, you MAY optionally mention ONE of these tools inline if it genuinely helps the reader:
 
 ${lines.join('\n')}
 
@@ -299,15 +305,19 @@ For this article, you should not mention any specific tools by name unless the e
       .join('\n');
 
     const prompt = `
-You are updating the BODY of an existing markdown blog post for the site "${site.siteName}".
+You are updating the BODY of an existing markdown blog post for the site "${
+      site.siteName
+    }".
 
 Audience:
 ${site.audience?.description || 'Owners and managers who run small crew-based businesses.'}
 
-Tone:
-- ${site.contentStyle?.tone?.join(', ') || 'plain, direct, no jargon'}
-Rules:
-- Explain tradeoffs, use concrete crew scenarios, keep intros tight.
+Tone and style:
+- Speak directly to one owner, like you are sitting at their shop desk.
+- Start fast, do not waste time re-defining basic payroll terms.
+- Focus on tradeoffs and real stuck points (confusing rules, messy handoffs, time leaks).
+- Use concrete examples from crew life, simple numbers, and short checklists.
+- Keep paragraphs short and scannable.
 - Do not use em dashes. Use commas, parentheses, or periods instead.
 
 FRONTMATTER (read only, do not change this):
@@ -356,28 +366,31 @@ Each suggestion has:
 
 Your job:
 
-1. Focus primarily on the "newHighValueSuggestions". 
-   - Add 1 to 3 new H2 or H3 sections that naturally answer the highest-priority new suggestions where sectionType is "new-section".
-   - Use headings that feel like real questions or clear statements (not spammy keyword strings).
+1. Focus primarily on the "newHighValueSuggestions".
+   - Add 1 or 2 new H2 or H3 sections that naturally answer the highest-priority new suggestions where sectionType is "new-section".
+   - Use headings that feel like real questions or clear statements, not spammy keyword strings.
    - You can weave in PASF phrases in headings when it sounds natural and helpful.
    - Avoid dramatically rewriting parts of the article that already answer older suggestions unless needed for clarity.
 
 2. Add or update a short FAQ section near the end of the BODY.
    - Use a heading like "Common questions from owners" or similar.
    - Include 3 to 5 Q and A pairs based primarily on new or under-served "faq-item" suggestions.
-   - Each question can echo how an owner would actually ask it.
+   - Each question should sound like something a busy owner would actually ask.
 
-3. Add 1 or 2 internal links to relevant existing articles, only where it reads naturally.
+3. Add 1 or 2 internal links to relevant existing articles, ONLY where it reads naturally.
    You can use any of these as targets:
 ${otherArticles}
 
 For internal links:
+- Aim to add at least one internal link if any of the topics are relevant.
 - Use natural anchor text (for example "our payroll checklist" or "our guide to switching providers").
-- Link to the correct URL for the slug, for example: https://${site.domain ||
-      'payrollforcrews.com'}/blog/construction-payroll-setup/
+- Link to the correct URL for the slug, for example: https://${
+      site.domain || 'payrollforcrews.com'
+    }/blog/construction-payroll-setup/
 
-4. When you choose headings, FAQ questions, or anchor text, treat PASF phrases as seasoning.
-   - It is better to skip a PASF phrase than to make the sentence feel awkward.
+4. Keep the overall length reasonable.
+   - You are enhancing the article, not doubling it.
+   - It is better to add one sharp example or checklist than three vague paragraphs.
 
 Important output rules:
 - Return ONLY the UPDATED BODY markdown (no frontmatter).
@@ -403,7 +416,7 @@ Important output rules:
       continue;
     }
 
-    // Simple sanity check: body should contain at least one heading or paragraph
+    // Simple sanity check: body should contain at least one heading or a decent amount of text
     if (!updatedBody.includes('#') && updatedBody.trim().length < 200) {
       console.warn(
         `Updated body for ${slug} looks too small or malformed, keeping original.`
@@ -424,20 +437,36 @@ Important output rules:
       .filter((q) => q.length > 0);
 
     const mergedUsed = Array.from(
-      new Set([
-        ...(logEntry.usedQueries || []),
-        ...newlyUsedQueries
-      ])
+      new Set([...(logEntry.usedQueries || []), ...newlyUsedQueries])
     );
 
     enrichLog[slug] = {
       usedQueries: mergedUsed,
       lastUpdated: new Date().toISOString()
     };
+
+    // Also store used queries + lastEnrichedAt directly on the content plan item
+    const planItem = contentPlan.items.find((i) => i.slug === slug);
+    if (planItem) {
+      const currentUsed = Array.isArray(planItem.usedQueries)
+        ? planItem.usedQueries
+        : [];
+      const mergedPlanUsed = Array.from(
+        new Set([...currentUsed, ...newlyUsedQueries])
+      );
+      planItem.usedQueries = mergedPlanUsed;
+      planItem.lastEnrichedAt = new Date().toISOString();
+      contentPlanDirty = true;
+    }
   }
 
   // Persist enrichment log so future runs can decide whether to touch an article
   writeJson('enrich-log.json', enrichLog);
+
+  // Persist any changes we made to content-plan.json (usedQueries, lastEnrichedAt)
+  if (contentPlanDirty) {
+    writeJson('content-plan.json', contentPlan);
+  }
 
   console.log('\nContent enrichment complete.');
 }

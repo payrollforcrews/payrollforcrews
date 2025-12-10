@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
@@ -7,43 +8,14 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const {
-  title,
-  description,
-  pubDate,
-  updatedDate,
-  heroImage,
-  heroAlt,
-} = Astro.props as Props;
+const { title, description, pubDate, updatedDate, heroImage, heroAlt } =
+  Astro.props as Props & { heroAlt?: string };
 
-// Default alt is the title. heroAlt is an optional manual override if you ever want it.
-const titleAltBase =
-  typeof title === 'string' && title.trim().length > 0
-    ? title.trim()
-    : 'Hero image for this article';
-
+// Alt text: use heroAlt if present, otherwise fall back to the title.
 const computedHeroAlt =
   typeof heroAlt === 'string' && heroAlt.trim().length > 0
     ? heroAlt.trim()
-    : titleAltBase;
-
-// Normalize heroImage (string path or Astro image metadata) to heroSrc
-let heroSrc: string | null = null;
-let heroWidth: number | undefined;
-let heroHeight: number | undefined;
-
-if (heroImage) {
-  if (typeof heroImage === 'string') {
-    heroSrc = heroImage;
-  } else if (typeof heroImage === 'object' && 'src' in heroImage) {
-    heroSrc = heroImage.src as string;
-
-    if ('width' in heroImage && 'height' in heroImage) {
-      heroWidth = heroImage.width as number;
-      heroHeight = heroImage.height as number;
-    }
-  }
-}
+    : `${title}.`;
 ---
 
 <html lang="en">
@@ -88,6 +60,38 @@ if (heroImage) {
         font-style: italic;
       }
 
+      .toc {
+        margin: 1.5rem 0 2rem 0;
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        background-color: rgba(var(--gray-light), 0.4);
+        border: 1px solid rgba(var(--gray-light), 0.9);
+      }
+      .toc__title {
+        margin: 0 0 0.75rem 0;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: rgb(var(--gray));
+      }
+      .toc__list {
+        margin: 0;
+        padding-left: 1.25rem;
+        list-style: disc;
+      }
+      .toc-item {
+        margin: 0.25rem 0;
+        line-height: 1.3;
+      }
+      .toc-item a {
+        text-decoration: none;
+        font-size: 0.95rem;
+        color: rgb(var(--gray-dark));
+      }
+      .toc-item a:hover {
+        text-decoration: underline;
+      }
+
       .newsletter-cta {
         margin-top: 3rem;
         padding: 1.5rem 1.25rem;
@@ -128,14 +132,12 @@ if (heroImage) {
     <main>
       <article>
         <div class="hero-image">
-          {heroSrc && (
-            <img
-              src={heroSrc}
+          {heroImage && (
+            <Image
+              width={1020}
+              height={510}
+              src={heroImage}
               alt={computedHeroAlt}
-              loading="lazy"
-              decoding="async"
-              width={heroWidth}
-              height={heroHeight}
             />
           )}
         </div>
@@ -154,6 +156,11 @@ if (heroImage) {
             <h1>{title}</h1>
             <hr />
           </div>
+
+          <nav class="toc" aria-label="Table of contents">
+            <p class="toc__title">In this guide</p>
+            <ul class="toc__list" id="toc-list"></ul>
+          </nav>
 
           {/* This is where the markdown content goes */}
           <slot />
@@ -176,5 +183,66 @@ if (heroImage) {
       </article>
     </main>
     <Footer />
+
+    <script>
+      if (typeof window !== 'undefined') {
+        (function () {
+          function slugify(text) {
+            return text
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, '-')
+              .replace(/(^-|-$)/g, '');
+          }
+
+          window.addEventListener('DOMContentLoaded', function () {
+            var article = document.querySelector('article');
+            var tocList = document.getElementById('toc-list');
+            var tocContainer = document.querySelector('.toc');
+
+            if (!article || !tocList || !tocContainer) {
+              return;
+            }
+
+            // Only grab H2 headings for the ToC
+            var headingNodes = article.querySelectorAll('h2');
+            var items = [];
+
+            headingNodes.forEach(function (heading) {
+              var text = heading.textContent || '';
+              if (!text.trim()) {
+                return;
+              }
+
+              if (!heading.id) {
+                heading.id = slugify(text);
+              }
+
+              items.push({
+                text: text.trim(),
+                id: heading.id
+              });
+            });
+
+            if (!items.length) {
+              tocContainer.style.display = 'none';
+              return;
+            }
+
+            // Limit to first 10 items so it never gets crazy long
+            items.slice(0, 10).forEach(function (item) {
+              var li = document.createElement('li');
+              li.className = 'toc-item';
+
+              var a = document.createElement('a');
+              a.href = '#' + item.id;
+              a.textContent = item.text;
+
+              li.appendChild(a);
+              tocList.appendChild(li);
+            });
+          });
+        })();
+      }
+    </script>
   </body>
 </html>
