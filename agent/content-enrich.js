@@ -72,6 +72,39 @@ function splitFrontmatter(content) {
   return { frontmatter, body };
 }
 
+function dedupeInternalLinks(markdown, siteDomain) {
+  const escapedDomain = (siteDomain || 'payrollforcrews.com').replace(
+    /[.*+?^${}()|[\]\\]/g,
+    '\\$&'
+  );
+  const seen = new Set();
+
+  // Absolute links like: https://payrollforcrews.com/blog/slug/
+  const absRegex = new RegExp(
+    '\\[([^\\]]+)\\]\\((https?:\\/\\/(?:www\\.)?' +
+      escapedDomain +
+      '\\/blog\\/[^)]+)\\)',
+    'g'
+  );
+
+  // Relative links like: /blog/slug/
+  const relRegex = /\[([^\]]+)\]\((\/blog\/[^)]+)\)/g;
+
+  function replacer(match, text, url) {
+    const key = url.replace(/\/$/, '');
+    if (seen.has(key)) {
+      // Second and later uses: drop the link, keep readable text
+      return text;
+    }
+    seen.add(key);
+    return match;
+  }
+
+  let result = markdown.replace(absRegex, replacer);
+  result = result.replace(relRegex, replacer);
+  return result;
+}
+
 async function callOpenAIForBody(prompt) {
   const url = 'https://api.openai.com/v1/chat/completions';
 
@@ -86,14 +119,10 @@ async function callOpenAIForBody(prompt) {
           content:
             'You are an editor for a niche site about payroll, time tracking, and job costing for small crew-based businesses. ' +
             'You only return the UPDATED BODY of a markdown article, not the frontmatter. ' +
-            'Write in a clear, direct voice that talks to one owner, like a smart friend who has done this before. ' +
-            'Keep intros tight, avoid re-explaining basic payroll concepts the reader already knows. ' +
-            'Favor concrete crew examples, small checklists, and specific numbers instead of vague platitudes. ' +
-            'Do not bloat the article, aim for a modest bump in depth, not a huge wall of new text. ' +
-            'Do not use em dashes. Use commas, parentheses, or periods instead. ' +
             'Do not wrap the result in code fences. Do not include YAML frontmatter. ' +
-	    'Never include any level-1 markdown headings that start with "# ". The page title is handled by the layout. Use "##" and "###" for section headings instead.' +
-            'Do not escape characters with unnecessary backslashes.'
+            'Do not escape characters with unnecessary backslashes. ' +
+            'Do not use em dashes. Use commas, parentheses, or periods instead. ' +
+            'Never add an H1 heading. The page already has a title. Use H2 and lower only.'
         },
         {
           role: 'user',
@@ -193,8 +222,6 @@ async function main() {
     `Found ${itemsToEnrich.length} articles to enrich. Starting updates...`
   );
 
-  let contentPlanDirty = false;
-
   for (const item of itemsToEnrich) {
     const { slug, title } = item;
     const mdPath = path.join(blogDir, `${slug}.md`);
@@ -264,24 +291,26 @@ async function main() {
       const lines = ctaProducts.map((p) => {
         const name = p.name || p.id;
         const inlineNote = p.inline_note || p.who_it_helps || '';
-        return `- ${name}: ${inlineNote}`;
+        return `- ${name} (slug "${p.id}"): ${inlineNote}`;
       });
 
       ctaToolsText = `
-For this article, you MAY optionally mention ONE of these tools inline if it genuinely helps the reader:
+For this article, you should usually work in exactly one inline mention of a single tool, if it genuinely helps the reader take the next step.
 
+Available tools for this article:
 ${lines.join('\n')}
 
 Inline mention rules:
-- At most one tool mention in the entire article.
-- It must be inside a normal paragraph, not its own section, list, or heading.
-- Do not frame it as a "recommended tools" list.
-- Use natural anchor text and link to /go/<productId>.
-- If there is no natural spot where mentioning a tool feels helpful, do not mention any tool at all.
+- At most one tool mention in the entire article. Zero is better than a forced plug.
+- Place the mention in a bottom section or near a clear next step, not in the introduction or first two paragraphs.
+- The mention must be part of a normal paragraph, not its own section, list, or heading.
+- Never create a "list of tools" section.
+- Use natural anchor text and link to /go/<productId> (for example /go/tyms when the slug is "tyms").
+- If there is truly no natural spot where a tool helps the reader, skip the mention.
 `;
     } else {
       ctaToolsText = `
-For this article, you should not mention any specific tools by name unless the existing body already does so in a natural way.
+For this article, you should not mention any specific tools by name unless the existing body already does so in a natural way. Do not create any new tool lists.
 `;
     }
 
@@ -311,15 +340,16 @@ You are updating the BODY of an existing markdown blog post for the site "${
     }".
 
 Audience:
-${site.audience?.description || 'Owners and managers who run small crew-based businesses.'}
+${
+  site.audience?.description || 'Owners and managers who run small crew-based businesses.'
+}
 
-Tone and style:
-- Speak directly to one owner, like you are sitting at their shop desk.
-- Start fast, do not waste time re-defining basic payroll terms.
-- Focus on tradeoffs and real stuck points (confusing rules, messy handoffs, time leaks).
-- Use concrete examples from crew life, simple numbers, and short checklists.
-- Keep paragraphs short and scannable.
+Tone:
+- ${site.contentStyle?.tone?.join(', ') || 'plain, direct, no jargon'}
+Rules:
+- Explain tradeoffs, use concrete crew scenarios, keep intros tight.
 - Do not use em dashes. Use commas, parentheses, or periods instead.
+- Do not add an H1 heading. The page already has a title. Use H2 and H3 only for sections.
 
 FRONTMATTER (read only, do not change this):
 ${frontmatter}
@@ -367,8 +397,8 @@ Each suggestion has:
 
 Your job:
 
-1. Focus primarily on the "newHighValueSuggestions".
-   - Add 1 or 2 new H2 or H3 sections that naturally answer the highest-priority new suggestions where sectionType is "new-section".
+1. Focus primarily on the "newHighValueSuggestions". 
+   - Add 1 to 3 new H2 or H3 sections that naturally answer the highest-priority new suggestions where sectionType is "new-section".
    - Use headings that feel like real questions or clear statements, not spammy keyword strings.
    - You can weave in PASF phrases in headings when it sounds natural and helpful.
    - Avoid dramatically rewriting parts of the article that already answer older suggestions unless needed for clarity.
@@ -376,28 +406,30 @@ Your job:
 2. Add or update a short FAQ section near the end of the BODY.
    - Use a heading like "Common questions from owners" or similar.
    - Include 3 to 5 Q and A pairs based primarily on new or under-served "faq-item" suggestions.
-   - Each question should sound like something a busy owner would actually ask.
+   - Each question can echo how an owner would actually ask it.
 
-3. Add 1 or 2 internal links to relevant existing articles, ONLY where it reads naturally.
+3. Add 1 or 2 internal links to relevant existing articles, only where it reads naturally.
    You can use any of these as targets:
 ${otherArticles}
 
-For internal links:
-- Aim to add at least one internal link if any of the topics are relevant.
-- Use natural anchor text (for example "our payroll checklist" or "our guide to switching providers").
+Internal link rules:
+- Link to at most 2 different internal articles total.
+- Do not link to the same internal article more than once in the updated body.
+- Use natural anchor text, for example "our payroll checklist" or "our guide to switching providers".
 - Link to the correct URL for the slug, for example: https://${
       site.domain || 'payrollforcrews.com'
     }/blog/construction-payroll-setup/
+- Avoid wrapping links in extra parentheses like (see this guide). They should read as a normal part of the sentence.
+- If none of the links feel natural, you may skip internal links entirely.
 
-4. Keep the overall length reasonable.
-   - You are enhancing the article, not doubling it.
-   - It is better to add one sharp example or checklist than three vague paragraphs.
+4. When you choose headings, FAQ questions, or anchor text, treat PASF phrases as seasoning.
+   It is better to skip a PASF phrase than to make the sentence feel awkward.
 
 Important output rules:
-- Return ONLY the UPDATED BODY markdown (no frontmatter).
+- Return ONLY the UPDATED BODY markdown, no frontmatter.
 - Do NOT wrap the result in backticks or code fences.
 - Do NOT include YAML frontmatter.
-- Do NOT escape characters unnecessarily (no leading backslashes before # or -).
+- Do NOT escape characters unnecessarily, no leading backslashes before # or -.
 `;
 
     console.log(
@@ -417,13 +449,19 @@ Important output rules:
       continue;
     }
 
-    // Simple sanity check: body should contain at least one heading or a decent amount of text
+    // Simple sanity check: body should contain at least one heading or paragraph
     if (!updatedBody.includes('#') && updatedBody.trim().length < 200) {
       console.warn(
         `Updated body for ${slug} looks too small or malformed, keeping original.`
       );
       continue;
     }
+
+    // De-dupe repeated internal links to the same article
+    updatedBody = dedupeInternalLinks(
+      updatedBody,
+      site.domain || 'payrollforcrews.com'
+    );
 
     // Backup original file
     fs.writeFileSync(`${mdPath}.bak`, articleContent, 'utf8');
@@ -445,29 +483,10 @@ Important output rules:
       usedQueries: mergedUsed,
       lastUpdated: new Date().toISOString()
     };
-
-    // Also store used queries + lastEnrichedAt directly on the content plan item
-    const planItem = contentPlan.items.find((i) => i.slug === slug);
-    if (planItem) {
-      const currentUsed = Array.isArray(planItem.usedQueries)
-        ? planItem.usedQueries
-        : [];
-      const mergedPlanUsed = Array.from(
-        new Set([...currentUsed, ...newlyUsedQueries])
-      );
-      planItem.usedQueries = mergedPlanUsed;
-      planItem.lastEnrichedAt = new Date().toISOString();
-      contentPlanDirty = true;
-    }
   }
 
   // Persist enrichment log so future runs can decide whether to touch an article
   writeJson('enrich-log.json', enrichLog);
-
-  // Persist any changes we made to content-plan.json (usedQueries, lastEnrichedAt)
-  if (contentPlanDirty) {
-    writeJson('content-plan.json', contentPlan);
-  }
 
   console.log('\nContent enrichment complete.');
 }
