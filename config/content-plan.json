@@ -1,6 +1,77 @@
 {
   "version": 1,
   "notes": "Seed content plan for Payroll for Crews. Each item can become a blog post.",
+  "pillars": [
+    {
+      "id": "payroll_setup_compliance",
+      "name": "Payroll Setup and Compliance",
+      "description": "Certified payroll, multi state payroll, switching providers, and W2 and 1099 compliance on public and private jobs.",
+      "postSlugs": [
+        "certified-payroll-basics",
+        "construction-payroll-setup",
+        "multi-state-construction-payroll",
+        "switching-payroll-mid-year",
+        "w2-and-1099-payroll"
+      ],
+      "hubSlugs": [
+        "construction-payroll-setup",
+        "certified-payroll-basics"
+      ],
+      "affiliateFocus": [
+        "payroll_providers",
+        "compliance_tools"
+      ]
+    },
+    {
+      "id": "time_tracking_job_costing",
+      "name": "Time Tracking and Job Costing",
+      "description": "Time tracking rules, job costing labor by job, and getting off paper timesheets for small crews.",
+      "postSlugs": [
+        "time-tracking-rules-for-foremen",
+        "job-costing-labor-small-crews",
+        "switching-from-paper-timesheets"
+      ],
+      "hubSlugs": [
+        "switching-from-paper-timesheets",
+        "job-costing-labor-small-crews"
+      ],
+      "affiliateFocus": [
+        "time_tracking_tools",
+        "job_costing_tools"
+      ]
+    },
+    {
+      "id": "payroll_mistakes_fixes",
+      "name": "Payroll Mistakes and Fixes",
+      "description": "Common overtime and payroll workflow mistakes for crew based businesses and how to fix them.",
+      "postSlugs": [
+        "overtime-mistakes-small-crews",
+        "payroll-checklist-pay-period"
+      ],
+      "hubSlugs": [
+        "payroll-checklist-pay-period"
+      ],
+      "affiliateFocus": [
+        "checklists",
+        "error_reduction_tools"
+      ]
+    },
+    {
+      "id": "ai_modern_tools",
+      "name": "AI and Modern Tools for Crews",
+      "description": "AI accountants and modern tools that help small crew based businesses run payroll and track profit.",
+      "postSlugs": [
+        "ai-accountant-for-crews-adam-by-tyms"
+      ],
+      "hubSlugs": [
+        "ai-accountant-for-crews-adam-by-tyms"
+      ],
+      "affiliateFocus": [
+        "ai_tools",
+        "accounting_tools"
+      ]
+    }
+  ],
   "items": [
     {
       "slug": "construction-payroll-setup",
