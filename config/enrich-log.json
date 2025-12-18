@@ -59,9 +59,14 @@
       "do I need separate payroll accounts for each state my crew works in",
       "can I use one payroll provider for multi state construction payroll",
       "can I use one payroll platform for multi state construction payroll",
-      "do I need to register my construction business in every state I work in"
+      "do I need to register my construction business in every state I work in",
+      "how to run multi state construction payroll for small crews",
+      "which state do I withhold payroll taxes in for construction workers on out of state jobs",
+      "do I need to register in every state where my construction crew works for payroll taxes",
+      "multi state construction payroll tax rules when crews work in different states",
+      "do I withhold payroll taxes based on where my construction crew lives or where they work"
     ],
-    "lastUpdated": "2025-12-08T09:02:26.474Z"
+    "lastUpdated": "2025-12-18T23:44:03.162Z"
   },
   "job-costing-labor-small-crews": {
     "usedQueries": [
@@ -70,9 +75,12 @@
       "how to calculate labor cost per job with limited payroll data",
       "what percentage of total job cost is typically labor for small crews",
       "what is job costing labor in a small construction company",
-      "can QuickBooks track labor costs by job for small construction companies"
+      "can QuickBooks track labor costs by job for small construction companies",
+      "what labor costs should be included in construction job costing",
+      "do I need job costing software for a 5 to 20 person construction crew",
+      "how do i include overtime in my job labor costs"
     ],
-    "lastUpdated": "2025-12-08T09:03:04.907Z"
+    "lastUpdated": "2025-12-18T23:44:23.256Z"
   },
   "switching-from-paper-timesheets": {
     "usedQueries": [
@@ -83,9 +91,12 @@
       "how long does it take to fully switch from paper timesheets?",
       "are digital timesheets accurate for construction payroll?",
       "can digital timesheets integrate with payroll software?",
-      "what equipment is needed to switch from paper timesheets?"
+      "what equipment is needed to switch from paper timesheets?",
+      "how to switch from paper timesheets to a construction time tracking app",
+      "do digital timesheets really reduce payroll errors for small construction crews",
+      "do digital timesheets really save money for small construction companies"
     ],
-    "lastUpdated": "2025-12-08T09:03:56.643Z"
+    "lastUpdated": "2025-12-18T23:44:48.958Z"
   },
   "certified-payroll-basics": {
     "usedQueries": [
@@ -111,9 +122,12 @@
       "can small construction companies classify workers as independent contractors",
       "what are the penalties for overtime violations in small construction companies",
       "what counts as overtime hours for small crew workers",
-      "can small construction companies pay overtime hourly or salaried"
+      "can small construction companies pay overtime hourly or salaried",
+      "do small construction companies have to pay overtime after 40 hours",
+      "do I have to pay overtime to 1099 subcontractors on my crew",
+      "when does travel time to and from jobsites count toward overtime"
     ],
-    "lastUpdated": "2025-12-08T09:05:31.721Z"
+    "lastUpdated": "2025-12-18T23:45:06.301Z"
   },
   "payroll-checklist-pay-period": {
     "usedQueries": [
@@ -125,8 +139,11 @@
       "how to handle overtime pay for construction workers",
       "construction payroll compliance checklist",
       "do construction workers qualify for overtime pay",
-      "why is certified payroll important for construction jobs"
+      "why is certified payroll important for construction jobs",
+      "payroll checklist for construction crew owners",
+      "what records do I need to keep for construction payroll",
+      "what records do I need to keep for construction crew payroll audits"
     ],
-    "lastUpdated": "2025-12-08T09:06:18.126Z"
+    "lastUpdated": "2025-12-18T23:45:27.320Z"
   }
 }
