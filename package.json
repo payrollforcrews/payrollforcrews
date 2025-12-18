@@ -18,7 +18,8 @@
     "hero:generate": "node agent/hero-images.js",
     "hero:refresh": "npm run hero:prompts && npm run hero:generate",
     "hero:reset": "node agent/hero-reset.js",
-    "hero:strip": "node agent/hero-strip.js"
+    "hero:strip": "node agent/hero-strip.js",
+    "linking": "node agent/add-related-guides.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",

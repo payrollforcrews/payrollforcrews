@@ -140,3 +140,10 @@ Start by observing your current time tracking on one jobsite this week. Note whe
 If you want to dive deeper into payroll setup after switching timesheets, check out our guide on [the best payroll and time tracking setup for 10 to 50 person construction crews](https://payrollforcrews.com/blog/construction-payroll-setup/).
 
 Switching from paper timesheets isn’t magic, but with a clear plan and steady steps, you’ll get better data, faster payroll, and less stress on the jobsite.
+
+
+## Related guides
+
+- [How to See Your Labor Cost by Job When You Only Have a Small Crew](/blog/job-costing-labor-small-crews/)
+- [Simple Time Tracking Rules for Foremen So Payroll Stops Being a Mess](/blog/time-tracking-rules-for-foremen/)
+

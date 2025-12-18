@@ -126,3 +126,9 @@ Absolutely. Paper timesheets and whiteboards lead to errors, lost time, and miss
 Overtime mistakes happen because small crews juggle many moving parts and paperwork often falls to the last minute. The key moves are to get your foremen responsible and trained, track all compensable time (especially drive and setup), and use a system that ties hours to specific jobs. Start with a simple checklist and clear communication this week. If you’re still using paper or whiteboards, try a basic app like TimeCamp to cut errors and save time.
 
 For more on setting up payroll and time tracking for your crew, check out our guide to the best payroll setup for 10 to 50 person construction crews at https://payrollforcrews.com/blog/construction-payroll-setup/. If you’re thinking about switching payroll providers mid-year, our guide can help you avoid headaches: https://payrollforcrews.com/blog/switching-payroll-mid-year/.
+
+
+## Related guides
+
+- [Payroll Checklist for Every Pay Period When You Run Field Crews](/blog/payroll-checklist-pay-period/)
+

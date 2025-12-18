@@ -200,3 +200,9 @@ Collect daily time records with classifications, verify wage rates meet prevaili
 ---
 
 This payroll checklist and tips should help you tighten your process and avoid common payroll headaches. If you want to improve your certified payroll or job costing further, check out our related guides linked above.
+
+
+## Related guides
+
+- [The Most Common Overtime Mistakes Small Crew-Based Businesses Make](/blog/overtime-mistakes-small-crews/)
+

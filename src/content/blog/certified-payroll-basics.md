@@ -142,3 +142,10 @@ You risk payment delays, fines, or even contract termination. Auditors may also 
 Start by printing the wage schedule and briefing your foremen on their new tracking duties. If you’re still stuck on how to set up payroll for your crew, check out our guide to the [best payroll and time tracking setup for 10 to 50 person construction crews](https://payrollforcrews.com/blog/construction-payroll-setup/).
 
 Certified payroll is a hassle, but with clear roles and a simple system, you can handle it without losing your mind or your contract.
+
+
+## Related guides
+
+- [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
+- [Running Construction Payroll Across Multiple States Without Getting Burned](/blog/multi-state-construction-payroll/)
+

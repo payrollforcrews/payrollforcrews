@@ -112,3 +112,10 @@ Once you settle on your version of these rules:
 If you are not sure which app fits your crews’ phones and habits best, start with a pilot on one or two crews using something like [TimeCamp](/go/timecamp) or [Connecteam](/go/connecteam). Once the pattern works there, roll it to the rest.
 
 The goal is not a perfect system, just a boring, repeatable rhythm so that when payday comes around, nobody is guessing.
+
+
+## Related guides
+
+- [Getting Off Paper Timesheets: A 30 Day Plan for Small Construction Crews](/blog/switching-from-paper-timesheets/)
+- [How to See Your Labor Cost by Job When You Only Have a Small Crew](/blog/job-costing-labor-small-crews/)
+

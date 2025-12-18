@@ -149,3 +149,10 @@ If you’re still juggling receipts and messy records, an AI accountant like Ada
 Next step: Pick your tracking method and get your foremen logging job-level hours this week. You’ll quickly see where your labor dollars go and gain control over your crew’s profitability.
 
 For more on setting up payroll and time tracking for crews, check out our [guide to the best payroll setup for 10 to 50 person construction crews](https://payrollforcrews.com/blog/construction-payroll-setup/).
+
+
+## Related guides
+
+- [Getting Off Paper Timesheets: A 30 Day Plan for Small Construction Crews](/blog/switching-from-paper-timesheets/)
+- [Simple Time Tracking Rules for Foremen So Payroll Stops Being a Mess](/blog/time-tracking-rules-for-foremen/)
+

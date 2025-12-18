@@ -122,3 +122,11 @@ Travel time is often compensable and can affect overtime calculations. Make it p
 ## Wrap Up
 
 Multi state construction payroll doesn’t have to be a headache. The key moves are making foremen responsible for detailed time tracking, keeping payroll centralized but state details separate, and using the right tools for your crew size. Start by tightening up daily hour reporting next week and reviewing your payroll process for state compliance. Fix these basics, and you’ll save time, avoid fines, and keep your crews paid right without the usual chaos.
+
+
+## Related guides
+
+- [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
+- [Certified Payroll Basics for Small Contractors Who Just Won a Public Job](/blog/certified-payroll-basics/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+
