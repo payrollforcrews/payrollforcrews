@@ -1,6 +1,10 @@
+// agent/niche-draft.js
 import 'dotenv/config';
 
-if (!process.env.OPENAI_API_KEY) {
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4.1-mini';
+
+if (!OPENAI_API_KEY) {
   console.error('Missing OPENAI_API_KEY in .env');
   process.exit(1);
 }
@@ -76,6 +80,7 @@ Rules:
 - 6 to 10 contentPlanItems max.
 - Slugs must be short and kebab case.
 - Make sure mainProducts only reference ids that exist in products.
+- Do not use em dashes. Use commas, parentheses, or periods instead.
 `.trim();
 
 const userPrompt = `
@@ -92,11 +97,11 @@ async function callOpenAI() {
   const res = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+      'Authorization': `Bearer ${OPENAI_API_KEY}`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      model: 'gpt-4o-mini',
+      model: OPENAI_MODEL,
       temperature: 0.5,
       messages: [
         { role: 'system', content: systemPrompt.replace('{{TOPIC}}', topic) },

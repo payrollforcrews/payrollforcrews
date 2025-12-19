@@ -1,89 +1,176 @@
-import fs from "node:fs/promises";
-import path from "node:path";
+// agent/add-related-guides.mjs
+// Add or refresh a "Related guides" section on each published blog post
 
-const ROOT = process.cwd();
-const CONTENT_PLAN_PATH = path.join(ROOT, "config", "content-plan.json");
-const BLOG_DIR = path.join(ROOT, "src", "content", "blog");
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const rootDir = path.resolve(__dirname, '..');
+const configDir = path.join(rootDir, 'config');
+const blogDir = path.join(rootDir, 'src', 'content', 'blog');
+
+function readJson(relativePath) {
+  const fullPath = path.join(configDir, relativePath);
+  if (!fs.existsSync(fullPath)) {
+    throw new Error(`Config file not found: ${relativePath}`);
+  }
+  const raw = fs.readFileSync(fullPath, 'utf8');
+  return JSON.parse(raw);
+}
+
+function splitFrontmatter(content) {
+  if (!content.startsWith('---')) {
+    return { frontmatter: null, body: content };
+  }
+
+  const lines = content.split('\n');
+  if (lines[0].trim() !== '---') {
+    return { frontmatter: null, body: content };
+  }
+
+  let secondIdx = -1;
+  for (let i = 1; i < lines.length; i++) {
+    if (lines[i].trim() === '---') {
+      secondIdx = i;
+      break;
+    }
+  }
+
+  if (secondIdx === -1) {
+    return { frontmatter: null, body: content };
+  }
+
+  const frontmatter = lines.slice(0, secondIdx + 1).join('\n');
+  const body = lines.slice(secondIdx + 1).join('\n');
+  return { frontmatter, body };
+}
+
+function buildRelatedList(currentSlug, items) {
+  const current = items.find((i) => i.slug === currentSlug);
+  if (!current) return [];
+
+  const pillarId = current.pillarId || null;
+
+  // Primary: other published items in the same pillar
+  let candidates = items.filter(
+    (i) =>
+      i.slug !== currentSlug &&
+      i.status === 'published' &&
+      i.pillarId &&
+      pillarId &&
+      i.pillarId === pillarId
+  );
+
+  // Fallback: if fewer than 3, allow other published items as backup
+  if (candidates.length < 3) {
+    const backup = items.filter(
+      (i) =>
+        i.slug !== currentSlug &&
+        i.status === 'published' &&
+        (!pillarId || i.pillarId !== pillarId)
+    );
+    candidates = [...candidates, ...backup];
+  }
+
+  // Keep first 3 distinct items
+  const uniqueBySlug = [];
+  const seen = new Set();
+  for (const c of candidates) {
+    if (seen.has(c.slug)) continue;
+    seen.add(c.slug);
+    uniqueBySlug.push(c);
+    if (uniqueBySlug.length >= 3) break;
+  }
+
+  return uniqueBySlug;
+}
+
+function applyRelatedSection(mdContent, relatedItems) {
+  const { frontmatter, body } = splitFrontmatter(mdContent);
+  if (!frontmatter) {
+    return null;
+  }
+
+  const marker = '## Related guides';
+  let baseBody = body;
+
+  const idx = body.indexOf(marker);
+  if (idx !== -1) {
+    // Strip everything from the existing Related guides heading down
+    baseBody = body.slice(0, idx).trimEnd() + '\n\n';
+  } else {
+    baseBody = body.trimEnd() + '\n\n';
+  }
+
+  if (!relatedItems.length) {
+    // No related posts, just drop any old section and return the cleaned body
+    return `${frontmatter}\n${baseBody}`.trimEnd() + '\n';
+  }
+
+  const lines = relatedItems.map((item) => {
+    const title = item.title || item.slug;
+    return `- [${title}](/blog/${item.slug}/)`;
+  });
+
+  const section = `${marker}\n\n${lines.join('\n')}\n`;
+
+  const combined = `${frontmatter}\n${baseBody}${section}`;
+  return combined.trimEnd() + '\n';
+}
 
 async function main() {
-  const raw = await fs.readFile(CONTENT_PLAN_PATH, "utf8");
-  const plan = JSON.parse(raw);
+  const contentPlan = readJson('content-plan.json');
 
-  const items = plan.items || [];
-  const itemsBySlug = new Map(items.map((item) => [item.slug, item]));
-
-  const pillars = plan.pillars || [];
-  if (pillars.length === 0) {
-    console.error("No pillars found in config/content-plan.json");
+  if (!contentPlan || !Array.isArray(contentPlan.items)) {
+    console.error('Invalid or missing config/content-plan.json');
     process.exit(1);
   }
 
-  for (const pillar of pillars) {
-    const postSlugs = pillar.postSlugs || [];
-    const hubSlugs = pillar.hubSlugs || [];
+  const items = contentPlan.items.filter(
+    (item) => item && typeof item.slug === 'string'
+  );
 
-    for (const slug of postSlugs) {
-      const mdPath = path.join(BLOG_DIR, `${slug}.md`);
+  console.log('Running Related guides linker...');
 
-      let md;
-      try {
-        md = await fs.readFile(mdPath, "utf8");
-      } catch (err) {
-        console.warn(`Skipping ${slug} - markdown file not found at ${mdPath}`);
-        continue;
-      }
+  for (const item of items) {
+    if (item.status !== 'published') continue;
 
-      // If it already has a Related guides section, skip
-      if (/^##\s+Related guides/im.test(md)) {
-        console.log(`Skipping ${slug} - already has Related guides section`);
-        continue;
-      }
+    const slug = item.slug;
+    const mdPath = path.join(blogDir, `${slug}.md`);
 
-      // Build related slugs: all hubs in this pillar (except self), plus one sibling
-      const relatedSlugs = [];
-
-      // add all hub posts in this pillar, except self
-      for (const hubSlug of hubSlugs) {
-        if (hubSlug !== slug && !relatedSlugs.includes(hubSlug)) {
-          relatedSlugs.push(hubSlug);
-        }
-      }
-
-      // add one sibling from this pillar
-      for (const sibling of postSlugs) {
-        if (sibling === slug) continue;
-        if (relatedSlugs.includes(sibling)) continue;
-        relatedSlugs.push(sibling);
-        break; // only one sibling for now
-      }
-
-      if (relatedSlugs.length === 0) {
-        console.log(`No related slugs found for ${slug}, skipping`);
-        continue;
-      }
-
-      const lines = [];
-      lines.push("");
-      lines.push("## Related guides");
-      lines.push("");
-
-      for (const related of relatedSlugs) {
-        const item = itemsBySlug.get(related);
-        const title = item && item.title ? item.title : related;
-        lines.push(`- [${title}](/blog/${related}/)`);
-      }
-
-      lines.push("");
-
-      const updated = md.trimEnd() + "\n\n" + lines.join("\n") + "\n";
-      await fs.writeFile(mdPath, updated, "utf8");
-
-      console.log(`Updated ${slug} with Related guides section`);
+    if (!fs.existsSync(mdPath)) {
+      console.warn(`Markdown not found for slug "${slug}", skipping.`);
+      continue;
     }
+
+    const relatedItems = buildRelatedList(slug, items);
+    if (!relatedItems.length) {
+      console.log(`No related slugs found for ${slug}, removing any old Related guides section.`);
+      const raw = fs.readFileSync(mdPath, 'utf8');
+      const updated = applyRelatedSection(raw, []);
+      if (updated) {
+        fs.writeFileSync(mdPath, updated, 'utf8');
+      }
+      continue;
+    }
+
+    const raw = fs.readFileSync(mdPath, 'utf8');
+    const updated = applyRelatedSection(raw, relatedItems);
+    if (!updated) {
+      console.warn(`Could not parse frontmatter for ${slug}, leaving file unchanged.`);
+      continue;
+    }
+
+    fs.writeFileSync(mdPath, updated, 'utf8');
+    console.log(`Updated ${slug} with Related guides section`);
   }
+
+  console.log('Related guides linking complete.');
 }
 
 main().catch((err) => {
-  console.error(err);
+  console.error('Fatal error in add-related-guides.mjs:', err);
   process.exit(1);
 });

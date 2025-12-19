@@ -7,6 +7,7 @@ import axios from 'axios';
 dotenv.config();
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4.1';
 
 if (!OPENAI_API_KEY) {
   console.error('Missing OPENAI_API_KEY in .env');
@@ -45,7 +46,6 @@ function stripFences(text) {
 }
 
 function splitFrontmatter(content) {
-  // Expect YAML frontmatter at the top: --- ... ---
   if (!content.startsWith('---')) {
     return { frontmatter: null, body: content };
   }
@@ -79,7 +79,6 @@ function dedupeInternalLinks(markdown, siteDomain) {
   );
   const seen = new Set();
 
-  // Absolute links like: https://payrollforcrews.com/blog/slug/
   const absRegex = new RegExp(
     '\\[([^\\]]+)\\]\\((https?:\\/\\/(?:www\\.)?' +
       escapedDomain +
@@ -87,13 +86,11 @@ function dedupeInternalLinks(markdown, siteDomain) {
     'g'
   );
 
-  // Relative links like: /blog/slug/
   const relRegex = /\[([^\]]+)\]\((\/blog\/[^)]+)\)/g;
 
   function replacer(match, text, url) {
     const key = url.replace(/\/$/, '');
     if (seen.has(key)) {
-      // Second and later uses: drop the link, keep readable text
       return text;
     }
     seen.add(key);
@@ -111,7 +108,7 @@ async function callOpenAIForBody(prompt) {
   const res = await axios.post(
     url,
     {
-      model: 'gpt-4.1-mini',
+      model: OPENAI_MODEL,
       temperature: 0.4,
       messages: [
         {
@@ -172,7 +169,6 @@ async function main() {
   const contentPlan = readJson('content-plan.json');
   const keywordMap = readJson('keyword-map.json');
 
-  // Products for optional inline mentions
   let productsList = [];
   try {
     productsList = readJson('products.json');
@@ -186,7 +182,6 @@ async function main() {
     productsById[p.id] = p;
   }
 
-  // PASF phrases harvested by seo-expand, keyed by slug
   let pasfMap = {};
   try {
     pasfMap = readJson('pasf-map.json');
@@ -194,7 +189,6 @@ async function main() {
     pasfMap = {};
   }
 
-  // Enrichment log to avoid re-touching articles when nothing new is available
   let enrichLog = {};
   try {
     enrichLog = readJson('enrich-log.json');
@@ -248,7 +242,6 @@ async function main() {
         .map((q) => q.toLowerCase().trim())
     );
 
-    // Only treat new and high-priority suggestions as triggers to touch the article
     const newHighValueSuggestions = allSuggestions.filter((s) => {
       const q = (s.query || '').trim();
       if (!q) return false;
@@ -257,7 +250,6 @@ async function main() {
       if (usedSet.has(lower)) return false;
 
       const priority = s.priority ?? 2;
-      // Only treat priority 1 or 2 as worth touching the article
       if (priority > 2) return false;
 
       return true;
@@ -272,7 +264,6 @@ async function main() {
 
     const pasfPhrases = Array.isArray(pasfMap[slug]) ? pasfMap[slug] : [];
 
-    // Optional inline product mentions for this article
     let ctaProducts = [];
     if (Array.isArray(item.mainProducts) && item.mainProducts.length) {
       ctaProducts = item.mainProducts
@@ -392,7 +383,7 @@ ${ctaToolsText}
 Each suggestion has:
 - "query": what a crew owner might type into Google
 - "type": "pillar" | "support" | "faq"
-- "sectionType": "new-section" or "faq-item"
+- "sectionType": "new-section" | "faq-item"
 - "priority": 1 (high) to 3 (low)
 
 Your job:
@@ -449,7 +440,6 @@ Important output rules:
       continue;
     }
 
-    // Simple sanity check: body should contain at least one heading or paragraph
     if (!updatedBody.includes('#') && updatedBody.trim().length < 200) {
       console.warn(
         `Updated body for ${slug} looks too small or malformed, keeping original.`
@@ -457,20 +447,34 @@ Important output rules:
       continue;
     }
 
-    // De-dupe repeated internal links to the same article
-    updatedBody = dedupeInternalLinks(
-      updatedBody,
-      site.domain || 'payrollforcrews.com'
-    );
+    // De-dupe repeated internal links in the main body,
+    // but do not touch the "Related guides" section.
+    const marker = '## Related guides';
+    const markerIndex = updatedBody.indexOf(marker);
 
-    // Backup original file
+    if (markerIndex === -1) {
+      updatedBody = dedupeInternalLinks(
+        updatedBody,
+        site.domain || 'payrollforcrews.com'
+      );
+    } else {
+      const mainBody = updatedBody.slice(0, markerIndex);
+      const relatedBlock = updatedBody.slice(markerIndex);
+
+      const dedupedMain = dedupeInternalLinks(
+        mainBody,
+        site.domain || 'payrollforcrews.com'
+      );
+
+      updatedBody = dedupedMain + relatedBlock;
+    }
+
     fs.writeFileSync(`${mdPath}.bak`, articleContent, 'utf8');
 
     const newContent = `${frontmatter}\n${updatedBody.trimStart()}`;
     fs.writeFileSync(mdPath, newContent, 'utf8');
     console.log(`Updated: ${slug} (backup written to ${mdPath}.bak)`);
 
-    // Update enrich log with the queries we just used
     const newlyUsedQueries = newHighValueSuggestions
       .map((s) => (s.query || '').trim())
       .filter((q) => q.length > 0);
@@ -485,7 +489,6 @@ Important output rules:
     };
   }
 
-  // Persist enrichment log so future runs can decide whether to touch an article
   writeJson('enrich-log.json', enrichLog);
 
   console.log('\nContent enrichment complete.');

@@ -7,7 +7,8 @@ import axios from 'axios';
 dotenv.config();
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const GOOGLE_SEARCH_API_KEY = process.env.GOOGLE_SEARCH_API_KEY;
+const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4.1';
+const GOOGLE_SEARCH_API_KEY = process.env.Google_Search_API_KEY || process.env.GOOGLE_SEARCH_API_KEY;
 
 if (!OPENAI_API_KEY) {
   console.error('Missing OPENAI_API_KEY in .env');
@@ -55,7 +56,7 @@ async function callOpenAI(prompt) {
   const res = await axios.post(
     url,
     {
-      model: 'gpt-4.1-mini',
+      model: OPENAI_MODEL,
       temperature: 0.4,
       messages: [
         {
@@ -212,7 +213,7 @@ async function main() {
       slug,
       title,
       primaryKeyword,
-      pillarId = 'unknown',
+      pillarId = 'construction-payroll',
       intent
     } = item;
 
@@ -320,8 +321,6 @@ Output JSON only in this exact shape:
     console.log(`Fetching PASF (autocomplete) suggestions for: "${primaryKeyword}"`);
     const rawSuggestions = await fetchAutocompleteSuggestions(primaryKeyword);
 
-    // Niche-aware filter: keep suggestions with at least 2 words AND containing
-    // at least one relevant token for this site.
     const allowedTokens = [
       'payroll',
       'time tracking',

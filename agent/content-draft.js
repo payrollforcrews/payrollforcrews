@@ -8,6 +8,7 @@ import axios from 'axios';
 dotenv.config();
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const OPENAI_MODEL = process.env.OPENAI_MODEL || 'gpt-4.1';
 
 if (!OPENAI_API_KEY) {
   console.error('Missing OPENAI_API_KEY in .env');
@@ -51,7 +52,7 @@ async function callOpenAIForDraft(systemPrompt, userPrompt) {
   const res = await axios.post(
     url,
     {
-      model: 'gpt-4.1-mini',
+      model: OPENAI_MODEL,
       temperature: 0.5,
       messages: [
         {
@@ -160,7 +161,7 @@ Style rules:
 - No em dashes. Use commas, parentheses, or periods instead.
 - Do not include your own table of contents, the layout will handle navigation.
 - Do not talk about "this article" in a meta way. Just talk to the reader.
-`;
+`.trim();
 
     const internalTargetsList = internalTargets.length
       ? internalTargets
