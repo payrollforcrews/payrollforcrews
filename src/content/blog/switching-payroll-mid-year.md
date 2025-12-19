@@ -328,10 +328,8 @@ Avoid turning off your old system before exporting all necessary data. Don’t a
 
 For more details on setting up payroll for your crew, see our [best payroll and time tracking setup for 10 to 50 person construction crews](https://payrollforcrews.com/blog/construction-payroll-setup/). If you have both W2 employees and 1099 contractors, check out our guide on [handling payroll for W2 employees and 1099 contractors](https://payrollforcrews.com/blog/w2-and-1099-payroll/).
 
-
 ## Related guides
 
 - [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
-- [Certified Payroll Basics for Small Contractors Who Just Won a Public Job](/blog/certified-payroll-basics/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)
 - [Running Construction Payroll Across Multiple States Without Getting Burned](/blog/multi-state-construction-payroll/)
-

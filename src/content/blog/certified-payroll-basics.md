@@ -143,9 +143,8 @@ Start by printing the wage schedule and briefing your foremen on their new track
 
 Certified payroll is a hassle, but with clear roles and a simple system, you can handle it without losing your mind or your contract.
 
-
 ## Related guides
 
 - [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
-- [Running Construction Payroll Across Multiple States Without Getting Burned](/blog/multi-state-construction-payroll/)
-
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)

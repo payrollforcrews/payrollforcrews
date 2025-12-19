@@ -290,4 +290,6 @@ This payroll checklist and tips should help you tighten your process and avoid c
 
 ## Related guides
 
-- [The Most Common Overtime Mistakes Small Crew-Based Businesses Make](/blog/overtime-mistakes-small-crews/)
+- [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)

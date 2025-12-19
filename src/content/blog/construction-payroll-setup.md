@@ -317,9 +317,8 @@ Essential payroll features include easy import of time data from your tracking t
 
 If you want help mapping this pattern to your exact crew size and mix of workers, keep an eye on the next guides on Payroll for Crews. We will go deeper into multi state payroll and certified payroll for public jobs.
 
-
 ## Related guides
 
-- [Certified Payroll Basics for Small Contractors Who Just Won a Public Job](/blog/certified-payroll-basics/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)
 - [Running Construction Payroll Across Multiple States Without Getting Burned](/blog/multi-state-construction-payroll/)
-

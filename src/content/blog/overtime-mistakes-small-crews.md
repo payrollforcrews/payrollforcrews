@@ -157,4 +157,6 @@ For more on setting up payroll and time tracking for your crew, check out our gu
 
 ## Related guides
 
-- [Payroll Checklist for Every Pay Period When You Run Field Crews](/blog/payroll-checklist-pay-period/)
+- [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)

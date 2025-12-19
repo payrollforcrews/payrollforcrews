@@ -247,6 +247,6 @@ Multi state construction payroll does not have to be a headache. The key moves a
 
 ## Related guides
 
-- Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews
-- [Certified Payroll Basics for Small Contractors Who Just Won a Public Job](https://payrollforcrews.com/blog/certified-payroll-basics/)
-- How to Switch Payroll Providers Mid-Year Without Losing Your Mind
+- [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)

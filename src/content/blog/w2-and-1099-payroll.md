@@ -265,10 +265,8 @@ Paying a contractor through payroll can cause incorrect tax withholding and repo
 
 For more on handling changes in payroll systems without headaches, check out [our guide to switching providers](https://payrollforcrews.com/blog/switching-payroll-mid-year/).
 
-
 ## Related guides
 
 - [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
-- [Certified Payroll Basics for Small Contractors Who Just Won a Public Job](/blog/certified-payroll-basics/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
 - [Running Construction Payroll Across Multiple States Without Getting Burned](/blog/multi-state-construction-payroll/)
-

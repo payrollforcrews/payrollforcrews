@@ -261,3 +261,9 @@ Adam is designed to be user-friendly, with natural language interaction and auto
 ---
 
 If you're still sorting out your payroll and time tracking setup, consider checking our [guide on getting a stable setup](https://payrollforcrews.com/blog/construction-payroll-setup/) and [how to handle payroll when you have both W2 employees and 1099 contractors](https://payrollforcrews.com/blog/w2-and-1099-payroll/). Getting those basics right will make any AI accounting tool more effective.
+
+## Related guides
+
+- [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)

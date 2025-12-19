@@ -274,5 +274,6 @@ Switching from paper timesheets is not magic, but with a clear plan and steady s
 
 ## Related guides
 
-- [How to See Your Labor Cost by Job When You Only Have a Small Crew](/blog/job-costing-labor-small-crews/)
-- [Simple Time Tracking Rules for Foremen So Payroll Stops Being a Mess](/blog/time-tracking-rules-for-foremen/)
+- [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)

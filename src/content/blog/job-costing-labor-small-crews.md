@@ -175,6 +175,24 @@ Software starts to make sense when:
 
 A good middle ground is to start with a simple app that handles time tracking by job, then let your bookkeeper or an AI accountant like [Adam from Tyms](/go/tyms) turn that data into clean job cost reports without you hiring a full-time office person.
 
+## Do I Need Job Costing If I Only Run One or Two Small Crews?
+
+Many owners with just one or two crews assume job costing is only for bigger contractors. The truth is, it depends on how many jobs you juggle and how tight your margins are.
+
+Job costing is worth it even with one or two crews if:
+
+- You work multiple jobs in the same week
+- You are not sure which jobs are actually making money
+- You see overtime often but cannot tell which job is causing it
+- You are guessing on bids instead of using past crew performance
+
+Where you can keep it lighter:
+
+- If your crew works one job at a time, start and finish before moving on, you can track labor at the job level with a simple weekly summary.
+- If you mostly do repeat, flat-rate work (for example, the same lawn route every week), you might track labor by route or customer group instead of every single visit.
+
+A simple rule: if a 5 to 10 percent swing in labor cost can make or break your profit on a job, you need at least basic job costing, even with a small crew.
+
 ## Real Example: Small Roofing Crew Gets Control Over Labor Costs
 
 A 9-person roofing crew was struggling with unpredictable labor costs. Foremen tracked hours on paper but did not separate drive time or breaks. The owner switched to a simple app that let foremen clock in and out by job on their phones. Drive time was tracked separately.
@@ -195,22 +213,22 @@ If you want to try something like this, TimeCamp is a solid choice for small cre
 
 ## Common questions from owners
 
+**Do I really need job costing if I only run one or two small crews?**  
+If your crew works one job at a time from start to finish, you can keep it simple, but you still need to know total labor hours and cost for each job. As soon as you are bouncing between jobs in the same week, or overtime starts showing up, basic job costing becomes important. You do not need fancy software, but you do need clear time logs by job so you are not guessing on profit.
+
 **How do I include overtime in my job labor costs without overcomplicating things?**  
 Use your weekly payroll report to see total overtime hours per employee, then allocate those overtime hours across the jobs they worked in proportion to their hours on each job. Apply the higher overtime rate (1.5 times wage, plus taxes and benefits) to those hours on each job. This keeps the math simple but still assigns the extra cost to the jobs that caused the overtime.
-
-**What percentage of total job cost is typically labor for small crews?**  
-For many small construction crews, labor ends up around 30% to 50% of total job cost. Trades that are labor-heavy and material-light, like roofing tear-off or landscaping maintenance, often sit closer to 40% or more. If your labor is regularly higher than that, it is a sign to check for untracked drive time, rework, or underbidding.
 
 **What labor costs should I include when I price a job?**  
 At a minimum, include base wages, employer payroll taxes, and expected overtime premiums. If you offer benefits, add a rough hourly amount for those too. For example, if health insurance costs you $400 a month per employee and they work about 160 hours, that is roughly $2.50 per hour you should build into your labor rate.
 
-**How often should small construction crews update labor cost tracking?**  
-Daily time tracking with a weekly review works best. Foremen or crew leads should record job-level hours every day so details are not forgotten. Then once a week, you or your office person turn those hours into labor cost by job and look for problems before the job is finished.
-
 **Can I calculate labor cost per job if my payroll data is not detailed?**  
 Yes. Use total hours from payroll, then use your daily job logs to split those hours across jobs. Multiply the hours per job by each worker’s fully loaded hourly rate. It will not be perfect, but it is far better than guessing and will quickly show which jobs are tight and which have room.
 
-**Do I really need job costing software for a 5 to 20 person crew?**  
+**How often should small construction crews update labor cost tracking?**  
+Daily time tracking with a weekly review works best. Foremen or crew leads should record job-level hours every day so details are not forgotten. Then once a week, you or your office person turn those hours into labor cost by job and look for problems before the job is finished.
+
+**Do I need job costing software for a 5 to 20 person crew?**  
 Not always. If you have a handful of jobs and reliable foremen, a spreadsheet and consistent time logs can work fine. Software becomes worth it when you are losing hours chasing down timesheets, you need backup for T&M billing or certified payroll, or you are running multiple crews across many jobs and cannot keep up with manual tracking.
 
 **Can QuickBooks track labor costs by job for my small company?**  
@@ -222,10 +240,10 @@ Small crews do not need complicated systems to get a grip on labor costs by job.
 
 Next step: Pick your tracking method and get your foremen logging job-level hours this week. You will quickly see where your labor dollars go and gain control over your crew’s profitability.
 
-For more on setting up payroll and time tracking for crews, check out our guide to the best payroll setup for 10 to 50 person construction crews.
-
+For more on setting up payroll and time tracking for crews, check out our guide to the best payroll setup for 10 to 50 person construction crews and our [payroll checklist for each pay period](https://payrollforcrews.com/blog/payroll-checklist-pay-period/) so your job costing numbers stay accurate once you run payroll.
 
 ## Related guides
 
-- [Getting Off Paper Timesheets: A 30 Day Plan for Small Construction Crews](/blog/switching-from-paper-timesheets/)
-- [Simple Time Tracking Rules for Foremen So Payroll Stops Being a Mess](/blog/time-tracking-rules-for-foremen/)
+- [Best Payroll and Time Tracking Setup for 10 to 50 Person Construction Crews](/blog/construction-payroll-setup/)
+- [How to Switch Payroll Providers Mid-Year Without Losing Your Mind](/blog/switching-payroll-mid-year/)
+- [How to Handle Payroll When You Have Both W2 Employees and 1099 Contractors](/blog/w2-and-1099-payroll/)

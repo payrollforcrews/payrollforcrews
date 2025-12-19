@@ -7495,5 +7495,1319 @@
     "type": "support",
     "sectionType": "new-section",
     "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to choose payroll and time tracking software for a small construction crew",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to track crew hours on different construction jobs for accurate payroll and job costing",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "simple payroll process for construction crews without a full office staff",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how do small construction contractors manage payroll and time tracking in the field",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "do I need separate software for construction payroll and accounting for a small crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "what is the easiest way to collect timesheets from a 10 to 20 person construction crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "can I run construction payroll with offline or kiosk time tracking on jobsites",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how much should I budget for payroll and time tracking software for a small construction crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "what year to date payroll data do I need to give a new provider mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "is switching payroll providers mid year risky for w2s and 1099s",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "can I switch payroll providers any time of year or do I have to wait until january",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to handle w2s when you switch payroll providers mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "common mistakes when changing payroll companies mid year for small crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "what to ask a new payroll provider about mid year conversion services",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "do I need to rerun old payrolls when switching providers mid year",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to decide if a crew worker should be w2 or 1099",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "can I pay the same worker as both w2 and 1099 in the same year",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to track hours and job costs for crews with both w2 and 1099 workers",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "what forms do I need for w2 employees and 1099 contractors",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "what happens if I misclassify a 1099 contractor who should be w2",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "do I need workers comp for 1099 contractors on my crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to budget labor costs when you use both w2 and 1099 workers",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "how to handle multi state workers compensation payroll for construction crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "how to track crew hours by job and state for payroll and job costing",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "do I pay unemployment and state taxes where my construction company is based or where the job is",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "how to pay construction employees who work in two states in the same week",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "can I use one payroll system for crews working in multiple states",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "common mistakes small contractors make with multi state construction payroll",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "how to track crew hours to specific jobs without expensive software",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "how to calculate labor cost per job from timesheets and payroll",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "best way to track construction labor costs instead of just QuickBooks",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "how detailed should job costing be for a small construction crew",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "do I need job costing if I only run one or two small crews",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "how often should I review labor cost by job for my crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "can I do job costing with paper timesheets and spreadsheets",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "how to switch from paper timesheets to construction time tracking apps",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "step by step plan to move a small construction crew off paper timesheets",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "best way to roll out timesheet software to field crews who hate change",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "how to handle high turnover workers when switching from paper timesheets",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "how to choose a construction timesheet app for small crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "how long does it take to train crews to use a time tracking app instead of paper",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "what if some crew members refuse to use the timesheet app",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "how to fill out certified payroll form WH-347 step by step",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "certified payroll requirements for small contractors on public works jobs",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "Davis-Bacon certified payroll explained for small construction crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "what is a certified payroll report for government construction projects",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "do small subcontractors have to submit certified payroll on public jobs",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "how to keep payroll records for prevailing wage and certified payroll",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "do I need special payroll software for certified payroll reporting",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "overtime rules for small construction companies under FLSA",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "how to calculate overtime for crew workers paid hourly and by day rate",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "are my construction crew members employees or independent contractors for overtime",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "overtime rules for prevailing wage and public works jobs",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "how to handle overtime when crews work in multiple states",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "what records do I need to keep to stay compliant with overtime rules",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "can I pay a salary to avoid overtime for my crew leads",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "construction payroll checklist for prevailing wage and Davis Bacon jobs",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "weekly payroll checklist for field crews on multiple jobsites",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "how to stay compliant with construction payroll laws for small contractors",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "certified payroll checklist for small construction contractors",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "what records do I need to keep for construction crew payroll",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "how do I handle overtime on construction crew payroll",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "do I need a different payroll checklist for public works or government jobs",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "how often should I review my construction payroll for compliance issues",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "ai accounting vs human bookkeeper for small crew-based business",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "how to use an ai accountant to track labor and materials by job",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "can ai bookkeeping work if I pay my crew in cash or checks",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "what is the best ai accountant app for US small businesses",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to run construction payroll for 10 to 50 person crews on multiple jobsites",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to track crew hours by job for construction payroll and job costing",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "best time tracking apps for small construction crews with offline mode",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how small construction contractors manage payroll without a full office staff",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how often should I run payroll for small construction crews paid hourly",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "what is the easiest way to collect timesheets from field crews on different jobs",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to handle overtime and travel time in construction payroll for small crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "construction-payroll-setup",
+    "baseKeyword": "construction payroll for small crews",
+    "query": "how to integrate construction time tracking with job costing reports",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to switch payroll providers mid year with jobsite crews",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "steps to change payroll companies in the middle of the year",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "what payroll records do I need to switch providers mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to move year to date payroll history when switching providers",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "is it risky to switch payroll providers mid year for my small construction crew",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how to handle w2s if I change payroll providers mid year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "can I switch payroll providers anytime or do I have to wait until year end",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "who files payroll taxes and w2s when I switch payroll mid year",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "what can go wrong when switching payroll providers mid year",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-payroll-mid-year",
+    "baseKeyword": "switch payroll providers mid year",
+    "query": "how long does a mid year payroll conversion usually take",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "can you pay someone as both a w2 employee and a 1099 contractor in the same year",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to decide if a crew worker should be w2 or 1099 on a jobsite",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "payroll tax differences between w2 employees and 1099 workers for small crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "what records do i need to keep for w2 employees vs 1099 subcontractors",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "what happens if i misclassify a 1099 worker who should be w2",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "can i put 1099 contractors on the same time tracking system as w2 employees",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "do i withhold taxes from 1099 workers on my crew payroll",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "w2-and-1099-payroll",
+    "baseKeyword": "w2 and 1099 workers payroll",
+    "query": "how to issue w2 and 1099 forms at year end for the same worker",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "how to handle multi state workers comp payroll for construction jobs",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "how to track hours by job and state for construction payroll",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "do I pay state unemployment tax where my construction company is based or where the crew works",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "what happens if I get multi state construction payroll wrong",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "how to pay per diem and travel time on multi state construction jobs",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "multi-state-construction-payroll",
+    "baseKeyword": "multi state construction payroll",
+    "query": "do construction workers owe income tax in every state they work in",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "how to allocate payroll to jobs for accurate job costing",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "best way to track construction labor costs instead of just using QuickBooks",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "how to job cost small one or two day construction jobs",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "do I really need job costing for a small construction crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "what is the easiest way to see labor cost per job each week",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "how detailed should job costing be for a 5 to 20 person crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "job-costing-labor-small-crews",
+    "baseKeyword": "job costing labor small construction company",
+    "query": "can I do job costing using paper timesheets and spreadsheets",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "step by step plan to move a small construction crew off paper timesheets in 30 days",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "best way to roll out timesheet software to field crews who are used to paper",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "how to get construction workers to actually use a time tracking app",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "how to handle high turnover when switching from paper timesheets",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "what is the best timesheet app for small construction crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "do paperless timesheets really save money for small construction companies",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "how long does it take to switch from paper timesheets to digital for a crew",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "switching-from-paper-timesheets",
+    "baseKeyword": "switch from paper timesheets construction",
+    "query": "what should I look for in construction timesheet software before leaving paper",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "how to fill out certified payroll reports (WH-347) for a small construction crew",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "certified payroll requirements for small contractors on Davis-Bacon public jobs",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "prevailing wage vs regular payroll for small construction companies",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "who has to submit certified payroll on public works jobs (prime vs subs)",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "what information is required on a certified payroll report",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "how often do I have to submit certified payroll on a public project",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "penalties for not doing certified payroll correctly on public jobs",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "certified-payroll-basics",
+    "baseKeyword": "certified payroll for small contractors",
+    "query": "software or tools to simplify certified payroll for small construction crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "overtime rules for small construction company crews under FLSA",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "how to calculate overtime for hourly construction workers on different jobsites",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "do small construction companies have to pay overtime after 40 hours per week",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "overtime mistakes when using independent contractors vs employees on crews",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "how to handle overtime on prevailing wage construction jobs",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "can a small construction business avoid overtime by paying a salary",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "what records do small construction companies need to keep for overtime compliance",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "are travel time and drive time for crews counted toward overtime",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "overtime-mistakes-small-crews",
+    "baseKeyword": "overtime rules small construction company",
+    "query": "what happens if a small construction company violates overtime laws",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "certified payroll checklist for Davis Bacon and prevailing wage jobs",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "construction payroll compliance checklist to avoid fines",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "what to check every pay period when running field crew payroll",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "how to handle off the books labor and unreported hours in crew payroll",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "construction crew payroll checklist for prevailing wage projects",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "do construction crew leaders count as exempt salaried employees",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "what records do I need to keep for construction payroll audits",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "payroll-checklist-pay-period",
+    "baseKeyword": "payroll checklist construction crew",
+    "query": "how often should I review my construction payroll for compliance",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 3
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "can an ai accountant replace a bookkeeper for my crew-based business",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "how does an ai accountant work for small businesses with field crews",
+    "type": "pillar",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "ai accounting vs traditional accountant for small contractors",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "can ai bookkeeping handle job costing and crew payroll",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 1
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "what is the best ai accountant app for small business owners on the go",
+    "type": "support",
+    "sectionType": "new-section",
+    "priority": 2
+  },
+  {
+    "pillarId": "construction-payroll",
+    "slug": "ai-accountant-for-crews-adam-by-tyms",
+    "baseKeyword": "ai accountant small business",
+    "query": "do i still need a cpa if i use an ai accountant for my small business",
+    "type": "faq",
+    "sectionType": "faq-item",
+    "priority": 2
   }
 ]
