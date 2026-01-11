@@ -5,7 +5,7 @@
     "category": "time_tracking",
     "who_it_helps": "Small crews that need simple job-costed time tracking tied to payroll and billing.",
     "landing_url": "https://www.timecamp.com/",
-    "affiliate_url": null,
+    "affiliate_url": "/go/timecamp",
     "status": "active"
   },
   {
@@ -14,7 +14,7 @@
     "category": "workforce_app",
     "who_it_helps": "Owners who want an all-in-one app for scheduling, time clocks, tasks and crew communication.",
     "landing_url": "https://connecteam.com/",
-    "affiliate_url": null,
+    "affiliate_url": "/go/connecteam",
     "status": "active"
   },
   {
@@ -23,7 +23,7 @@
     "category": "hr_payroll",
     "who_it_helps": "Small businesses that want HR records, leave tracking and payroll in one cloud system.",
     "landing_url": "https://web.hr/",
-    "affiliate_url": null,
+    "affiliate_url": "/go/webhr",
     "status": "active"
   },
   {
@@ -32,7 +32,7 @@
     "category": "global_payroll",
     "who_it_helps": "US and EU companies hiring contractors or employees in multiple countries and currencies.",
     "landing_url": "https://www.lano.io/",
-    "affiliate_url": "https://www.lano.io/affiliate-collaborations/lano-and-payroll-for-crews?utm_source=PayrollForCrews_001QF00001YFXnZYAX&utm_medium=affiliate&utm_campaign=partnerstack_251201",
+    "affiliate_url": "/go/lano",
     "status": "active",
     "inline_note": "When you start paying crews or contractors in more than one country, this is usually where I tell people to look at a global payroll platform like Lano so they do not have to figure out each country's tax rules themselves."
   },
@@ -42,8 +42,9 @@
     "category": "ai_accounting",
     "who_it_helps": "Small businesses and crew-based companies that want AI to handle bookkeeping, categorization and basic reporting without hiring a full-time accountant.",
     "landing_url": "https://www.useadam.io/",
-    "affiliate_url": "https://app.useadam.io/auth/register?linkId=lp_914554&sourceId=payrollforcrews&tenantId=tyms",
+    "affiliate_url": "/go/tyms",
     "status": "active",
     "inline_note": "If you are drowning in receipts and basic bookkeeping, this is usually where I suggest trying an AI accountant like Adam from Tyms so you can stay on top of the numbers without hiring a full time bookkeeper."
   }
 ]
+
